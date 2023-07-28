@@ -468,23 +468,23 @@ public class CommentQueryService {
         }
     }
 
+   
+
+
     /**
      * Gets the user comments with the specified user id, page number and page size.
      *
-     * @param userId         the specified user id
-     * @param anonymous      the specified comment anonymous
-     * @param currentPageNum the specified page number
-     * @param pageSize       the specified page size
-     * @param viewer         the specified viewer, may be {@code null}
+     * @param userId      the specified user id
+     * @param commentInfo
      * @return user comments, return an empty list if not found
      */
-    public List<JSONObject> getUserComments(final String userId, final int anonymous,
-                                            final int currentPageNum, final int pageSize, final JSONObject viewer) {
+    //reduced Long parameter list
+    public List<JSONObject> getUserComments(final String userId, commentInfo commentInfo) {
         final Query query = new Query().addSort(Comment.COMMENT_CREATE_TIME, SortDirection.DESCENDING).
-                setPage(currentPageNum, pageSize).
+                setPage(commentInfo.getCurrentPageNum(), commentInfo.getPageSize()).
                 setFilter(CompositeFilterOperator.and(
                         new PropertyFilter(Comment.COMMENT_AUTHOR_ID, FilterOperator.EQUAL, userId),
-                        new PropertyFilter(Comment.COMMENT_ANONYMOUS, FilterOperator.EQUAL, anonymous),
+                        //new PropertyFilter(Comment.COMMENT_ANONYMOUS, FilterOperator.EQUAL, anonymous),
                         new PropertyFilter(Comment.COMMENT_STATUS, FilterOperator.EQUAL, Comment.COMMENT_STATUS_C_VALID)));
         try {
             final JSONObject result = commentRepository.get(query);
@@ -494,8 +494,8 @@ public class CommentQueryService {
             }
 
             String currentUserId = null;
-            if (null != viewer) {
-                currentUserId = viewer.optString(Keys.OBJECT_ID);
+            if (null != commentInfo.getViewer()) {
+                currentUserId = commentInfo.getViewer().optString(Keys.OBJECT_ID);
             }
 
             final JSONObject pagination = result.optJSONObject(Pagination.PAGINATION);
@@ -506,81 +506,7 @@ public class CommentQueryService {
             first.put(Pagination.PAGINATION_RECORD_COUNT, recordCount);
             first.put(Pagination.PAGINATION_PAGE_COUNT, pageCount);
 
-            for (final JSONObject comment : ret) {
-                comment.put(Comment.COMMENT_CREATE_TIME, new Date(comment.optLong(Comment.COMMENT_CREATE_TIME)));
-
-                final String articleId = comment.optString(Comment.COMMENT_ON_ARTICLE_ID);
-                final JSONObject article = articleRepository.get(articleId);
-
-                comment.put(Comment.COMMENT_T_ARTICLE_TITLE,
-                        Article.ARTICLE_STATUS_C_INVALID == article.optInt(Article.ARTICLE_STATUS)
-                                ? langPropsService.get("articleTitleBlockLabel")
-                                : Emotions.convert(article.optString(Article.ARTICLE_TITLE)));
-                comment.put(Comment.COMMENT_T_ARTICLE_TYPE, article.optInt(Article.ARTICLE_TYPE));
-                comment.put(Comment.COMMENT_T_ARTICLE_PERMALINK, article.optString(Article.ARTICLE_PERMALINK));
-                comment.put(Comment.COMMENT_T_ARTICLE_PERFECT, article.optInt(Article.ARTICLE_PERFECT));
-
-                final JSONObject commenter = userRepository.get(userId);
-                comment.put(Comment.COMMENT_T_COMMENTER, commenter);
-
-                final String articleAuthorId = article.optString(Article.ARTICLE_AUTHOR_ID);
-                JSONObject articleAuthor;
-                if (Article.ARTICLE_ANONYMOUS_C_PUBLIC == article.optInt(Article.ARTICLE_ANONYMOUS)) {
-                    articleAuthor = userRepository.get(articleAuthorId);
-                } else {
-                    articleAuthor = userRepository.getAnonymousUser();
-                }
-                final String articleAuthorName = articleAuthor.optString(User.USER_NAME);
-                comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_NAME, articleAuthorName);
-                comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_URL, "/member/" + articleAuthor.optString(User.USER_NAME));
-                final String articleAuthorThumbnailURL = avatarQueryService.getAvatarURLByUser(articleAuthor, "48");
-                comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_THUMBNAIL_URL, articleAuthorThumbnailURL);
-
-                final String commentId = comment.optString(Keys.OBJECT_ID);
-                final int cmtViewMode = UserExt.USER_COMMENT_VIEW_MODE_C_TRADITIONAL;
-                final int cmtPage = getCommentPage(articleId, commentId, cmtViewMode, Symphonys.ARTICLE_COMMENTS_CNT);
-                comment.put(Comment.COMMENT_SHARP_URL, "/article/" + articleId + "?p=" + cmtPage + "&m=" + cmtViewMode + "#" + commentId);
-
-                if (Article.ARTICLE_TYPE_C_DISCUSSION == article.optInt(Article.ARTICLE_TYPE)
-                        && Article.ARTICLE_ANONYMOUS_C_PUBLIC == article.optInt(Article.ARTICLE_ANONYMOUS)) {
-                    final String msgContent = langPropsService.get("articleDiscussionLabel").
-                            replace("{user}", UserExt.getUserLink(articleAuthorName));
-
-                    if (null == viewer) {
-                        comment.put(Comment.COMMENT_CONTENT, msgContent);
-                    } else {
-                        final String commenterName = commenter.optString(User.USER_NAME);
-                        final String viewerUserName = viewer.optString(User.USER_NAME);
-                        final String viewerRole = viewer.optString(User.USER_ROLE);
-
-                        if (!commenterName.equals(viewerUserName) && !Role.ROLE_ID_C_ADMIN.equals(viewerRole)) {
-                            final String articleContent = article.optString(Article.ARTICLE_CONTENT);
-                            final Set<String> userNames = userQueryService.getUserNames(articleContent);
-
-                            boolean invited = false;
-                            for (final String userName : userNames) {
-                                if (userName.equals(viewerUserName)) {
-                                    invited = true;
-                                    break;
-                                }
-                            }
-
-                            if (!invited) {
-                                comment.put(Comment.COMMENT_CONTENT, msgContent);
-                            }
-                        }
-                    }
-                }
-
-                processCommentContent(comment);
-
-                // https://github.com/b3log/symphony/issues/682
-                if (Comment.COMMENT_VISIBLE_C_AUTHOR == comment.optInt(Comment.COMMENT_VISIBLE)) {
-                    if (StringUtils.isBlank(currentUserId) || (!StringUtils.equals(currentUserId, userId) && !StringUtils.equals(currentUserId, articleAuthorId))) {
-                        comment.put(Comment.COMMENT_CONTENT, langPropsService.get("onlySelfAndArticleAuthorVisibleLabel"));
-                    }
-                }
-            }
+            extracted(userId, commentInfo, ret, currentUserId);
 
             return ret;
         } catch (final RepositoryException e) {
@@ -590,10 +516,89 @@ public class CommentQueryService {
         }
     }
 
+    private void extracted(String userId, commentInfo commentInfo, List<JSONObject> ret, String currentUserId) throws RepositoryException {
+        for (final JSONObject comment : ret) {
+            comment.put(Comment.COMMENT_CREATE_TIME, new Date(comment.optLong(Comment.COMMENT_CREATE_TIME)));
+
+            final String articleId = comment.optString(Comment.COMMENT_ON_ARTICLE_ID);
+            final JSONObject article = articleRepository.get(articleId);
+
+            comment.put(Comment.COMMENT_T_ARTICLE_TITLE,
+                    Article.ARTICLE_STATUS_C_INVALID == article.optInt(Article.ARTICLE_STATUS)
+                            ? langPropsService.get("articleTitleBlockLabel")
+                            : Emotions.convert(article.optString(Article.ARTICLE_TITLE)));
+            comment.put(Comment.COMMENT_T_ARTICLE_TYPE, article.optInt(Article.ARTICLE_TYPE));
+            comment.put(Comment.COMMENT_T_ARTICLE_PERMALINK, article.optString(Article.ARTICLE_PERMALINK));
+            comment.put(Comment.COMMENT_T_ARTICLE_PERFECT, article.optInt(Article.ARTICLE_PERFECT));
+
+            final JSONObject commenter = userRepository.get(userId);
+            comment.put(Comment.COMMENT_T_COMMENTER, commenter);
+
+            final String articleAuthorId = article.optString(Article.ARTICLE_AUTHOR_ID);
+            JSONObject articleAuthor;
+            if (Article.ARTICLE_ANONYMOUS_C_PUBLIC == article.optInt(Article.ARTICLE_ANONYMOUS)) {
+                articleAuthor = userRepository.get(articleAuthorId);
+            } else {
+                articleAuthor = userRepository.getAnonymousUser();
+            }
+            final String articleAuthorName = articleAuthor.optString(User.USER_NAME);
+            comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_NAME, articleAuthorName);
+            comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_URL, "/member/" + articleAuthor.optString(User.USER_NAME));
+            final String articleAuthorThumbnailURL = avatarQueryService.getAvatarURLByUser(articleAuthor, "48");
+            comment.put(Comment.COMMENT_T_ARTICLE_AUTHOR_THUMBNAIL_URL, articleAuthorThumbnailURL);
+
+            final String commentId = comment.optString(Keys.OBJECT_ID);
+            final int cmtViewMode = UserExt.USER_COMMENT_VIEW_MODE_C_TRADITIONAL;
+            final int cmtPage = getCommentPage(articleId, commentId, cmtViewMode, Symphonys.ARTICLE_COMMENTS_CNT);
+            comment.put(Comment.COMMENT_SHARP_URL, "/article/" + articleId + "?p=" + cmtPage + "&m=" + cmtViewMode + "#" + commentId);
+
+            if (Article.ARTICLE_TYPE_C_DISCUSSION == article.optInt(Article.ARTICLE_TYPE)
+                    && Article.ARTICLE_ANONYMOUS_C_PUBLIC == article.optInt(Article.ARTICLE_ANONYMOUS)) {
+                final String msgContent = langPropsService.get("articleDiscussionLabel").
+                        replace("{user}", UserExt.getUserLink(articleAuthorName));
+
+                if (null == commentInfo.getViewer()) {
+                    comment.put(Comment.COMMENT_CONTENT, msgContent);
+                } else {
+                    final String commenterName = commenter.optString(User.USER_NAME);
+                    final String viewerUserName = commentInfo.getViewer().optString(User.USER_NAME);
+                    final String viewerRole = commentInfo.getViewer().optString(User.USER_ROLE);
+
+                    if (!commenterName.equals(viewerUserName) && !Role.ROLE_ID_C_ADMIN.equals(viewerRole)) {
+                        final String articleContent = article.optString(Article.ARTICLE_CONTENT);
+                        final Set<String> userNames = userQueryService.getUserNames(articleContent);
+
+                        boolean invited = false;
+                        for (final String userName : userNames) {
+                            if (userName.equals(viewerUserName)) {
+                                invited = true;
+                                break;
+                            }
+                        }
+
+                        if (!invited) {
+                            comment.put(Comment.COMMENT_CONTENT, msgContent);
+                        }
+                    }
+                }
+            }
+
+            processCommentContent(comment);
+
+            // https://github.com/b3log/symphony/issues/682
+            if (Comment.COMMENT_VISIBLE_C_AUTHOR == comment.optInt(Comment.COMMENT_VISIBLE)) {
+                if (StringUtils.isBlank(currentUserId) || (!StringUtils.equals(currentUserId, userId) && !StringUtils.equals(currentUserId, articleAuthorId))) {
+                    comment.put(Comment.COMMENT_CONTENT, langPropsService.get("onlySelfAndArticleAuthorVisibleLabel"));
+                }
+            }
+        }
+    }
+
+
     /**
      * Gets the article comments with the specified article id, page number and page size.
      *
-     * @param articleId      the specified article id
+     * @paramv articleId      the specified article id
      * @param currentPageNum the specified page number
      * @param pageSize       the specified page size
      * @param sortMode       the specified sort mode (traditional: 0, real time: 1)
@@ -607,55 +612,13 @@ public class CommentQueryService {
 
         if (UserExt.USER_COMMENT_VIEW_MODE_C_REALTIME == sortMode) {
             query.addSort(Keys.OBJECT_ID, SortDirection.DESCENDING);
-        } else {
+        }
+        else {
             query.addSort(Keys.OBJECT_ID, SortDirection.ASCENDING);
         }
 
         try {
-            Stopwatchs.start("Query comments");
-            JSONObject result;
-            try {
-                result = commentRepository.get(query);
-            } finally {
-                Stopwatchs.end();
-            }
-            final List<JSONObject> ret = (List<JSONObject>) result.opt(Keys.RESULTS);
-            organizeComments(ret);
-
-            Stopwatchs.start("Revision, paging, original");
-            try {
-                for (final JSONObject comment : ret) {
-                    final String commentId = comment.optString(Keys.OBJECT_ID);
-
-                    // Fill revision count
-                    comment.put(Comment.COMMENT_REVISION_COUNT, 0);
-                    if (Comment.COMMENT_STATUS_C_VALID == comment.optInt(Comment.COMMENT_STATUS)) {
-                        comment.put(Comment.COMMENT_REVISION_COUNT,
-                                revisionQueryService.count(commentId, Revision.DATA_TYPE_C_COMMENT));
-                    }
-
-                    final String originalCmtId = comment.optString(Comment.COMMENT_ORIGINAL_COMMENT_ID);
-                    if (StringUtils.isBlank(originalCmtId)) {
-                        continue;
-                    }
-
-                    // Fill page number
-                    comment.put(Pagination.PAGINATION_CURRENT_PAGE_NUM,
-                            getCommentPage(articleId, originalCmtId, sortMode, pageSize));
-
-                    // Fill original comment
-                    final JSONObject originalCmt = commentRepository.get(originalCmtId);
-                    if (null != originalCmt) {
-                        organizeComment(originalCmt);
-                        comment.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
-                                originalCmt.optString(Comment.COMMENT_T_AUTHOR_THUMBNAIL_URL));
-                    } else {
-                        comment.put(Comment.COMMENT_ORIGINAL_COMMENT_ID, "");
-                    }
-                }
-            } finally {
-                Stopwatchs.end();
-            }
+            final List<JSONObject> ret = getJsonObjects(articleId, pageSize, sortMode, query);
 
             return ret;
         } catch (final RepositoryException e) {
@@ -664,6 +627,58 @@ public class CommentQueryService {
             return Collections.emptyList();
         } finally {
             Stopwatchs.end();
+        }
+    }
+
+    private List<JSONObject> getJsonObjects(String articleId, int pageSize, int sortMode, Query query) throws RepositoryException {
+        Stopwatchs.start("Query comments");
+        JSONObject result;
+        try {
+            result = commentRepository.get(query);
+        } finally {
+            Stopwatchs.end();
+        }
+        final List<JSONObject> ret = (List<JSONObject>) result.opt(Keys.RESULTS);
+        organizeComments(ret);
+
+        Stopwatchs.start("Revision, paging, original");
+        try {
+            extracted(articleId, pageSize, sortMode, ret);
+        } finally {
+            Stopwatchs.end();
+        }
+        return ret;
+    }
+
+    private void extracted(String articleId, int pageSize, int sortMode, List<JSONObject> ret) throws RepositoryException {
+        for (final JSONObject comment : ret) {
+            final String commentId = comment.optString(Keys.OBJECT_ID);
+
+            // Fill revision count
+            comment.put(Comment.COMMENT_REVISION_COUNT, 0);
+            if (Comment.COMMENT_STATUS_C_VALID == comment.optInt(Comment.COMMENT_STATUS)) {
+                comment.put(Comment.COMMENT_REVISION_COUNT,
+                        revisionQueryService.count(commentId, Revision.DATA_TYPE_C_COMMENT));
+            }
+
+            final String originalCmtId = comment.optString(Comment.COMMENT_ORIGINAL_COMMENT_ID);
+            if (StringUtils.isBlank(originalCmtId)) {
+                continue;
+            }
+
+            // Fill page number
+            comment.put(Pagination.PAGINATION_CURRENT_PAGE_NUM,
+                    getCommentPage(articleId, originalCmtId, sortMode, pageSize));
+
+            // Fill original comment
+            final JSONObject originalCmt = commentRepository.get(originalCmtId);
+            if (null != originalCmt) {
+                organizeComment(originalCmt);
+                comment.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
+                        originalCmt.optString(Comment.COMMENT_T_AUTHOR_THUMBNAIL_URL));
+            } else {
+                comment.put(Comment.COMMENT_ORIGINAL_COMMENT_ID, "");
+            }
         }
     }
 
@@ -854,5 +869,42 @@ public class CommentQueryService {
         commentContent = MediaPlayers.renderAudio(commentContent);
         commentContent = MediaPlayers.renderVideo(commentContent);
         comment.put(Comment.COMMENT_CONTENT, commentContent);
+    }
+
+    public static class commentInfo {
+        private final int anonymous;
+        private final int currentPageNum;
+        private final int pageSize;
+        private final JSONObject viewer;
+    
+        /**
+         * @param anonymous      the specified comment anonymous
+         * @param currentPageNum the specified page number
+         * @param pageSize       the specified page size
+         * @param viewer         the specified viewer, may be {@code null}
+         *
+         */
+        public commentInfo(int anonymous, int currentPageNum, int pageSize, JSONObject viewer) {
+            this.anonymous = anonymous;
+            this.currentPageNum = currentPageNum;
+            this.pageSize = pageSize;
+            this.viewer = viewer;
+        }
+    
+        public int getAnonymous() {
+            return anonymous;
+        }
+    
+        public int getCurrentPageNum() {
+            return currentPageNum;
+        }
+    
+        public int getPageSize() {
+            return pageSize;
+        }
+    
+        public JSONObject getViewer() {
+            return viewer;
+        }
     }
 }

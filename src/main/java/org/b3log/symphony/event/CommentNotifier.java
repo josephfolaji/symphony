@@ -234,10 +234,10 @@ public class CommentNotifier extends AbstractEventListener<JSONObject> {
             final boolean isDiscussion = originalArticle.optInt(Article.ARTICLE_TYPE) == Article.ARTICLE_TYPE_C_DISCUSSION;
             final String articleAuthorId = originalArticle.optString(Article.ARTICLE_AUTHOR_ID);
             final boolean commenterIsArticleAuthor = articleAuthorId.equals(commenterId);
-
-            final Set<String> requisiteAtParticipantsPermissions = new HashSet<>();
-            requisiteAtParticipantsPermissions.add(Permission.PERMISSION_ID_C_COMMON_AT_PARTICIPANTS);
-            final boolean hasAtParticipantPerm = roleQueryService.userHasPermissions(commenterId, requisiteAtParticipantsPermissions);
+            //Requisite At Participant's permissions
+            final Set<String> ParticipantsPermissions = new HashSet<>();
+            ParticipantsPermissions.add(Permission.PERMISSION_ID_C_COMMON_AT_PARTICIPANTS);
+            final boolean hasAtParticipantPerm = roleQueryService.userHasPermissions(commenterId, ParticipantsPermissions);
 
             if (hasAtParticipantPerm) {
                 // 1. '@participants' Notification

@@ -304,7 +304,7 @@ public class UserProcessor {
             dataModel.put(Common.IS_FOLLOWING, isFollowing);
         }
 
-        final List<JSONObject> userComments = commentQueryService.getUserComments(user.optString(Keys.OBJECT_ID), Comment.COMMENT_ANONYMOUS_C_ANONYMOUS, pageNum, pageSize, currentUser);
+        final List<JSONObject> userComments = commentQueryService.getUserComments(user.optString(Keys.OBJECT_ID), new CommentQueryService.commentInfo(Comment.COMMENT_ANONYMOUS_C_ANONYMOUS, pageNum, pageSize, currentUser));
         dataModel.put(Common.USER_HOME_COMMENTS, userComments);
 
         int recordCount = 0;
@@ -501,7 +501,7 @@ public class UserProcessor {
             dataModel.put(Common.IS_FOLLOWING, isFollowing);
         }
 
-        final List<JSONObject> userComments = commentQueryService.getUserComments(user.optString(Keys.OBJECT_ID), Comment.COMMENT_ANONYMOUS_C_PUBLIC, pageNum, pageSize, currentUser);
+        final List<JSONObject> userComments = commentQueryService.getUserComments(user.optString(Keys.OBJECT_ID), new CommentQueryService.commentInfo(Comment.COMMENT_ANONYMOUS_C_PUBLIC, pageNum, pageSize, currentUser));
         dataModel.put(Common.USER_HOME_COMMENTS, userComments);
 
         int recordCount = 0;
