@@ -31,6 +31,7 @@ import org.b3log.latke.model.Pagination;
 import org.b3log.latke.model.User;
 import org.b3log.latke.repository.*;
 import org.b3log.latke.service.LangPropsService;
+import org.b3log.latke.service.ServiceException;
 import org.b3log.symphony.model.*;
 import org.b3log.symphony.processor.channel.ArticleChannel;
 import org.b3log.symphony.processor.channel.ArticleListChannel;
@@ -38,6 +39,7 @@ import org.b3log.symphony.repository.CommentRepository;
 import org.b3log.symphony.repository.UserRepository;
 import org.b3log.symphony.service.*;
 import org.b3log.symphony.util.*;
+import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.util.HashSet;
@@ -165,40 +167,7 @@ public class CommentNotifier extends AbstractEventListener<JSONObject> {
             chData.put(Comment.COMMENT_ORIGINAL_COMMENT_ID, originalCmtId);
 
             String originalCmtAuthorId = null;
-            if (StringUtils.isNotBlank(originalCmtId)) {
-                final Query numQuery = new Query().setPage(1, Integer.MAX_VALUE).setPageCount(1);
-
-                switch (commentViewMode) {
-                    case UserExt.USER_COMMENT_VIEW_MODE_C_TRADITIONAL:
-                        numQuery.setFilter(CompositeFilterOperator.and(
-                                new PropertyFilter(Comment.COMMENT_ON_ARTICLE_ID, FilterOperator.EQUAL, articleId),
-                                new PropertyFilter(Keys.OBJECT_ID, FilterOperator.LESS_THAN_OR_EQUAL, originalCmtId)
-                        )).addSort(Keys.OBJECT_ID, SortDirection.ASCENDING);
-                        break;
-                    case UserExt.USER_COMMENT_VIEW_MODE_C_REALTIME:
-                        numQuery.setFilter(CompositeFilterOperator.and(
-                                new PropertyFilter(Comment.COMMENT_ON_ARTICLE_ID, FilterOperator.EQUAL, articleId),
-                                new PropertyFilter(Keys.OBJECT_ID, FilterOperator.GREATER_THAN_OR_EQUAL, originalCmtId)
-                        )).addSort(Keys.OBJECT_ID, SortDirection.DESCENDING);
-                        break;
-                }
-
-                final long num = commentRepository.count(numQuery);
-                final int page = (int) ((num / Symphonys.ARTICLE_COMMENTS_CNT) + 1);
-                chData.put(Pagination.PAGINATION_CURRENT_PAGE_NUM, page);
-
-                final JSONObject originalCmt = commentRepository.get(originalCmtId);
-                originalCmtAuthorId = originalCmt.optString(Comment.COMMENT_AUTHOR_ID);
-                final JSONObject originalCmtAuthor = userRepository.get(originalCmtAuthorId);
-
-                if (Comment.COMMENT_ANONYMOUS_C_PUBLIC == originalCmt.optInt(Comment.COMMENT_ANONYMOUS)) {
-                    chData.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
-                            avatarQueryService.getAvatarURLByUser(originalCmtAuthor, "20"));
-                } else {
-                    chData.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
-                            avatarQueryService.getDefaultAvatarURL("20"));
-                }
-            }
+            originalCmtAuthorId = getOriginalCmtAuthorId(originalCmtId, commentViewMode, articleId, chData, originalCmtAuthorId);
 
 
             chData.put(Comment.COMMENT_T_AUTHOR_NAME, commenterName);
@@ -239,38 +208,7 @@ public class CommentNotifier extends AbstractEventListener<JSONObject> {
             ParticipantsPermissions.add(Permission.PERMISSION_ID_C_COMMON_AT_PARTICIPANTS);
             final boolean hasAtParticipantPerm = roleQueryService.userHasPermissions(commenterId, ParticipantsPermissions);
 
-            if (hasAtParticipantPerm) {
-                // 1. '@participants' Notification
-                if (commentContent.contains("@participants ")) {
-                    final List<JSONObject> participants = articleQueryService.getArticleLatestParticipants(articleId, Integer.MAX_VALUE);
-                    int count = participants.size();
-                    if (count < 1) {
-                        return;
-                    }
-
-                    count = 0;
-                    for (final JSONObject participant : participants) {
-                        final String participantId = participant.optString(Keys.OBJECT_ID);
-                        if (participantId.equals(commenterId)) {
-                            continue;
-                        }
-
-                        count++;
-
-                        final JSONObject requestJSONObject = new JSONObject();
-                        requestJSONObject.put(Notification.NOTIFICATION_USER_ID, participantId);
-                        requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
-                        notificationMgmtService.addAtNotification(requestJSONObject);
-                    }
-
-                    final int sum = count * Pointtransfer.TRANSFER_SUM_C_AT_PARTICIPANTS;
-                    if (sum > 0) {
-                        pointtransferMgmtService.transfer(commenterId, Pointtransfer.ID_C_SYS,
-                                Pointtransfer.TRANSFER_TYPE_C_AT_PARTICIPANTS, sum, commentId, System.currentTimeMillis(), "");
-                    }
-                    return;
-                }
-            }
+            if (participantNotification(hasAtParticipantPerm, commentContent, articleId, commenterId, commentId)) return;
 
             final Set<String> atUserNames = userQueryService.getUserNames(commentContent);
             atUserNames.remove(commenterName);
@@ -290,26 +228,9 @@ public class CommentNotifier extends AbstractEventListener<JSONObject> {
                 return;
             }
 
-            // 2. 'Commented' Notification
-            if (!commenterIsArticleAuthor) {
-                final JSONObject requestJSONObject = new JSONObject();
-                requestJSONObject.put(Notification.NOTIFICATION_USER_ID, articleAuthorId);
-                requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
-                notificationMgmtService.addCommentedNotification(requestJSONObject);
-            }
+            commentedNotification(commenterIsArticleAuthor, articleAuthorId, commentId);
 
-            // 3. 'Reply' Notification
-            final Set<String> repliedIds = new HashSet<>();
-            if (StringUtils.isNotBlank(originalCmtId)) {
-                if (!articleAuthorId.equals(originalCmtAuthorId)) {
-                    final JSONObject requestJSONObject = new JSONObject();
-                    requestJSONObject.put(Notification.NOTIFICATION_USER_ID, originalCmtAuthorId);
-                    requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
-                    notificationMgmtService.addReplyNotification(requestJSONObject);
-
-                    repliedIds.add(originalCmtAuthorId);
-                }
-            }
+            final Set<String> repliedIds = replyNotification(originalCmtId, articleAuthorId, originalCmtAuthorId, commentId);
 
             final String articleContent = originalArticle.optString(Article.ARTICLE_CONTENT);
             final Set<String> articleContentAtUserNames = userQueryService.getUserNames(articleContent);
@@ -318,57 +239,168 @@ public class CommentNotifier extends AbstractEventListener<JSONObject> {
             requisiteAtUserPermissions.add(Permission.PERMISSION_ID_C_COMMON_AT_USER);
             final boolean hasAtUserPerm = roleQueryService.userHasPermissions(commenterId, requisiteAtUserPermissions);
             final Set<String> atIds = new HashSet<>();
-            if (hasAtUserPerm) {
-                // 4. 'At' Notification
-                for (final String atUserName : atUserNames) {
-                    if (isDiscussion && !articleContentAtUserNames.contains(atUserName)) {
-                        continue;
-                    }
+            atNotification(hasAtUserPerm, atUserNames, isDiscussion, articleContentAtUserNames, articleAuthorId, repliedIds, commentId, atIds);
 
-                    final JSONObject atUser = userQueryService.getUserByName(atUserName);
-                    if (atUser.optString(Keys.OBJECT_ID).equals(articleAuthorId)) {
-                        continue; // Has notified in step 2
-                    }
-
-                    final String atUserId = atUser.optString(Keys.OBJECT_ID);
-                    if (repliedIds.contains(atUserId)) {
-                        continue;
-                    }
-
-                    final JSONObject requestJSONObject = new JSONObject();
-                    requestJSONObject.put(Notification.NOTIFICATION_USER_ID, atUserId);
-                    requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
-                    notificationMgmtService.addAtNotification(requestJSONObject);
-
-                    atIds.add(atUserId);
-                }
-            }
-
-            if (64 <= StringUtils.length(commentContent)) {
-                // 5. 'following - article comment' Notification
-                for (final String userId : watcherIds) {
-                    final JSONObject watcher = userRepository.get(userId);
-                    final String watcherName = watcher.optString(User.USER_NAME);
-                    if ((isDiscussion && !articleContentAtUserNames.contains(watcherName)) || commenterName.equals(watcherName)
-                            || repliedIds.contains(userId) || atIds.contains(userId)) {
-                        continue;
-                    }
-
-                    // 仅楼主可见回帖不发通知给帖子关注者 https://github.com/b3log/symphony/issues/904
-                    if (Comment.COMMENT_VISIBLE_C_AUTHOR == originalComment.optInt(Comment.COMMENT_VISIBLE)) {
-                        continue;
-                    }
-
-                    final JSONObject requestJSONObject = new JSONObject();
-                    requestJSONObject.put(Notification.NOTIFICATION_USER_ID, userId);
-                    requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
-
-                    notificationMgmtService.addFollowingArticleCommentNotification(requestJSONObject);
-                }
-            }
+            articleCommentNotification(commentContent, watcherIds, isDiscussion, articleContentAtUserNames, commenterName, repliedIds, atIds, originalComment, commentId);
         } catch (final Exception e) {
             LOGGER.log(Level.ERROR, "Sends the comment notification failed", e);
         }
+    }
+
+    private void articleCommentNotification(String commentContent, Set<String> watcherIds, boolean isDiscussion, Set<String> articleContentAtUserNames, String commenterName, Set<String> repliedIds, Set<String> atIds, JSONObject originalComment, String commentId) throws RepositoryException, ServiceException {
+        if (64 <= StringUtils.length(commentContent)) {
+            // 5. 'following - article comment' Notification
+            for (final String userId : watcherIds) {
+                final JSONObject watcher = userRepository.get(userId);
+                final String watcherName = watcher.optString(User.USER_NAME);
+                if ((isDiscussion && !articleContentAtUserNames.contains(watcherName)) || commenterName.equals(watcherName)
+                        || repliedIds.contains(userId) || atIds.contains(userId)) {
+                    continue;
+                }
+
+                // 仅楼主可见回帖不发通知给帖子关注者 https://github.com/b3log/symphony/issues/904
+                if (Comment.COMMENT_VISIBLE_C_AUTHOR == originalComment.optInt(Comment.COMMENT_VISIBLE)) {
+                    continue;
+                }
+
+                final JSONObject requestJSONObject = new JSONObject();
+                requestJSONObject.put(Notification.NOTIFICATION_USER_ID, userId);
+                requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
+
+                notificationMgmtService.addFollowingArticleCommentNotification(requestJSONObject);
+            }
+        }
+    }
+
+    private @NotNull Set<String> replyNotification(String originalCmtId, String articleAuthorId, String originalCmtAuthorId, String commentId) throws ServiceException {
+        // 3. 'Reply' Notification
+        final Set<String> repliedIds = new HashSet<>();
+        if (StringUtils.isNotBlank(originalCmtId)) {
+            if (!articleAuthorId.equals(originalCmtAuthorId)) {
+                final JSONObject requestJSONObject = new JSONObject();
+                requestJSONObject.put(Notification.NOTIFICATION_USER_ID, originalCmtAuthorId);
+                requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
+                notificationMgmtService.addReplyNotification(requestJSONObject);
+
+                repliedIds.add(originalCmtAuthorId);
+            }
+        }
+        return repliedIds;
+    }
+
+    private void atNotification(boolean hasAtUserPerm, Set<String> atUserNames, boolean isDiscussion, Set<String> articleContentAtUserNames, String articleAuthorId, Set<String> repliedIds, String commentId, Set<String> atIds) throws ServiceException {
+        if (hasAtUserPerm) {
+            // 4. 'At' Notification
+            for (final String atUserName : atUserNames) {
+                if (isDiscussion && !articleContentAtUserNames.contains(atUserName)) {
+                    continue;
+                }
+
+                final JSONObject atUser = userQueryService.getUserByName(atUserName);
+                if (atUser.optString(Keys.OBJECT_ID).equals(articleAuthorId)) {
+                    continue; // Has notified in step 2
+                }
+
+                final String atUserId = atUser.optString(Keys.OBJECT_ID);
+                if (repliedIds.contains(atUserId)) {
+                    continue;
+                }
+
+                final JSONObject requestJSONObject = new JSONObject();
+                requestJSONObject.put(Notification.NOTIFICATION_USER_ID, atUserId);
+                requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
+                notificationMgmtService.addAtNotification(requestJSONObject);
+
+                atIds.add(atUserId);
+            }
+        }
+    }
+
+
+    private void commentedNotification(boolean commenterIsArticleAuthor, String articleAuthorId, String commentId) throws ServiceException {
+        // 2. 'Commented' Notification
+        if (!commenterIsArticleAuthor) {
+            final JSONObject requestJSONObject = new JSONObject();
+            requestJSONObject.put(Notification.NOTIFICATION_USER_ID, articleAuthorId);
+            requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
+            notificationMgmtService.addCommentedNotification(requestJSONObject);
+        }
+    }
+
+
+    private boolean participantNotification(boolean hasAtParticipantPerm, String commentContent, String articleId, String commenterId, String commentId) throws ServiceException {
+        if (hasAtParticipantPerm) {
+            // 1. '@participants' Notification
+            if (commentContent.contains("@participants ")) {
+                final List<JSONObject> participants = articleQueryService.getArticleLatestParticipants(articleId, Integer.MAX_VALUE);
+                int count = participants.size();
+                if (count < 1) {
+                    return true;
+                }
+
+                count = 0;
+                for (final JSONObject participant : participants) {
+                    final String participantId = participant.optString(Keys.OBJECT_ID);
+                    if (participantId.equals(commenterId)) {
+                        continue;
+                    }
+
+                    count++;
+
+                    final JSONObject requestJSONObject = new JSONObject();
+                    requestJSONObject.put(Notification.NOTIFICATION_USER_ID, participantId);
+                    requestJSONObject.put(Notification.NOTIFICATION_DATA_ID, commentId);
+                    notificationMgmtService.addAtNotification(requestJSONObject);
+                }
+
+                final int sum = count * Pointtransfer.TRANSFER_SUM_C_AT_PARTICIPANTS;
+                if (sum > 0) {
+                    pointtransferMgmtService.transfer(commenterId, Pointtransfer.ID_C_SYS,
+                            Pointtransfer.TRANSFER_TYPE_C_AT_PARTICIPANTS, sum, commentId, System.currentTimeMillis(), "");
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    private String getOriginalCmtAuthorId(String originalCmtId, int commentViewMode, String articleId, JSONObject chData, String originalCmtAuthorId) throws RepositoryException {
+        if (StringUtils.isNotBlank(originalCmtId)) {
+            final Query numQuery = new Query().setPage(1, Integer.MAX_VALUE).setPageCount(1);
+
+            switch (commentViewMode) {
+                case UserExt.USER_COMMENT_VIEW_MODE_C_TRADITIONAL:
+                    numQuery.setFilter(CompositeFilterOperator.and(
+                            new PropertyFilter(Comment.COMMENT_ON_ARTICLE_ID, FilterOperator.EQUAL, articleId),
+                            new PropertyFilter(Keys.OBJECT_ID, FilterOperator.LESS_THAN_OR_EQUAL, originalCmtId)
+                    )).addSort(Keys.OBJECT_ID, SortDirection.ASCENDING);
+                    break;
+                case UserExt.USER_COMMENT_VIEW_MODE_C_REALTIME:
+                    numQuery.setFilter(CompositeFilterOperator.and(
+                            new PropertyFilter(Comment.COMMENT_ON_ARTICLE_ID, FilterOperator.EQUAL, articleId),
+                            new PropertyFilter(Keys.OBJECT_ID, FilterOperator.GREATER_THAN_OR_EQUAL, originalCmtId)
+                    )).addSort(Keys.OBJECT_ID, SortDirection.DESCENDING);
+                    break;
+            }
+
+            final long num = commentRepository.count(numQuery);
+            final int page = (int) ((num / Symphonys.ARTICLE_COMMENTS_CNT) + 1);
+            chData.put(Pagination.PAGINATION_CURRENT_PAGE_NUM, page);
+
+            final JSONObject originalCmt = commentRepository.get(originalCmtId);
+            originalCmtAuthorId = originalCmt.optString(Comment.COMMENT_AUTHOR_ID);
+            final JSONObject originalCmtAuthor = userRepository.get(originalCmtAuthorId);
+
+            if (Comment.COMMENT_ANONYMOUS_C_PUBLIC == originalCmt.optInt(Comment.COMMENT_ANONYMOUS)) {
+                chData.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
+                        avatarQueryService.getAvatarURLByUser(originalCmtAuthor, "20"));
+            } else {
+                chData.put(Comment.COMMENT_T_ORIGINAL_AUTHOR_THUMBNAIL_URL,
+                        avatarQueryService.getDefaultAvatarURL("20"));
+            }
+        }
+        return originalCmtAuthorId;
     }
 
     /**

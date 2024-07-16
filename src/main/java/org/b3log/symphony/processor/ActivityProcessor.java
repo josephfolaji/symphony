@@ -37,8 +37,8 @@ import org.b3log.symphony.model.Pointtransfer;
 import org.b3log.symphony.model.UserExt;
 import org.b3log.symphony.processor.middleware.CSRFMidware;
 import org.b3log.symphony.processor.middleware.LoginCheckMidware;
-import org.b3log.symphony.processor.middleware.validate.Activity1A0001CollectValidationMidware;
-import org.b3log.symphony.processor.middleware.validate.Activity1A0001ValidationMidware;
+import org.b3log.symphony.processor.middleware.validate.activity1A0001GetValidation;
+import org.b3log.symphony.processor.middleware.validate.activity1A0001Validation;
 import org.b3log.symphony.service.*;
 import org.b3log.symphony.util.Sessions;
 import org.b3log.symphony.util.StatusCodes;
@@ -107,7 +107,7 @@ public class ActivityProcessor {
      * Data model service.
      */
     @Inject
-    private DataModelService dataModelService;
+    private static DataModelService dataModelService;
 
     /**
      * Language service.
@@ -122,19 +122,20 @@ public class ActivityProcessor {
         final BeanManager beanManager = BeanManager.getInstance();
         final LoginCheckMidware loginCheck = beanManager.getReference(LoginCheckMidware.class);
         final CSRFMidware csrfMidware = beanManager.getReference(CSRFMidware.class);
-        final Activity1A0001ValidationMidware activity1A0001ValidationMidware = beanManager.getReference(Activity1A0001ValidationMidware.class);
-        final Activity1A0001CollectValidationMidware activity1A0001CollectValidationMidware = beanManager.getReference(Activity1A0001CollectValidationMidware.class);
+        //REFACTOR LONG IDENTIFIER
+        final activity1A0001Validation activity1A0001Validation = beanManager.getReference(activity1A0001Validation.class);
+        final activity1A0001GetValidation activity1A0001GetValidation = beanManager.getReference(activity1A0001GetValidation.class);
 
         final ActivityProcessor activityProcessor = beanManager.getReference(ActivityProcessor.class);
         Dispatcher.get("/activity/character", activityProcessor::showCharacter, loginCheck::handle, csrfMidware::fill);
         Dispatcher.post("/activity/character/submit", activityProcessor::submitCharacter, loginCheck::handle);
-        Dispatcher.get("/activities", activityProcessor::showActivities);
+        Dispatcher.get("/activities", dataModelService::showActivities);
         Dispatcher.get("/activity/checkin", activityProcessor::showDailyCheckin);
         Dispatcher.get("/activity/daily-checkin", activityProcessor::dailyCheckin, loginCheck::handle);
         Dispatcher.get("/activity/yesterday-liveness-reward", activityProcessor::yesterdayLivenessReward, loginCheck::handle);
         Dispatcher.get("/activity/1A0001", activityProcessor::show1A0001, csrfMidware::fill);
-        Dispatcher.post("/activity/1A0001/bet", activityProcessor::bet1A0001, loginCheck::handle, csrfMidware::check, activity1A0001ValidationMidware::handle);
-        Dispatcher.post("/activity/1A0001/collect", activityProcessor::collect1A0001, loginCheck::handle, activity1A0001CollectValidationMidware::handle);
+        Dispatcher.post("/activity/1A0001/bet", activityProcessor::bet1A0001, loginCheck::handle, csrfMidware::check, activity1A0001Validation::handle);
+        Dispatcher.post("/activity/1A0001/collect", activityProcessor::collect1A0001, loginCheck::handle, activity1A0001GetValidation::handle);
         Dispatcher.get("/activity/eating-snake", activityProcessor::showEatingSnake, loginCheck::handle, csrfMidware::fill);
         Dispatcher.post("/activity/eating-snake/start", activityProcessor::startEatingSnake, loginCheck::handle, csrfMidware::check);
         Dispatcher.post("/activity/eating-snake/collect", activityProcessor::collectEatingSnake, loginCheck::handle, csrfMidware::fill);
@@ -208,26 +209,6 @@ public class ActivityProcessor {
 
         final JSONObject result = activityMgmtService.submitCharacter(userId, dataPart, character);
         context.renderJSON(result);
-    }
-
-    /**
-     * Shows activity page.
-     *
-     * @param context the specified context
-     */
-    public void showActivities(final RequestContext context) {
-        final AbstractFreeMarkerRenderer renderer = new SkinRenderer(context, "home/activities.ftl");
-        final Map<String, Object> dataModel = renderer.getDataModel();
-        dataModelService.fillHeaderAndFooter(context, dataModel);
-        dataModelService.fillRandomArticles(dataModel);
-        dataModelService.fillSideHotArticles(dataModel);
-        dataModelService.fillSideTags(dataModel);
-        dataModelService.fillLatestCmts(dataModel);
-
-        dataModel.put("pointActivityCheckinMin", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKIN_MIN);
-        dataModel.put("pointActivityCheckinMax", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKIN_MAX);
-        dataModel.put("pointActivityCheckinStreak", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKINT_STREAK);
-        dataModel.put("activitYesterdayLivenessRewardMaxPoint", Symphonys.ACTIVITY_YESTERDAY_REWARD_MAX);
     }
 
     /**

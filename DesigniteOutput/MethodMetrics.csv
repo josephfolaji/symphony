@@ -1,0 +1,1037 @@
+Project Name,Package Name,Type Name,Method Name,LOC,CC,PC,Line no,IsTest,Main prod class tested,Production classes tested
+symphony,org.b3log.symphony.cache,ArticleCache,getSideHotArticles,6,2,0,87,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,ArticleCache,loadSideHotArticles,27,1,0,100,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.cache,ArticleCache,getSideRandomArticles,12,3,0,134,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,ArticleCache,loadSideRandomArticles,22,2,0,155,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.cache,ArticleCache,getArticleAbstract,7,2,1,182,0,,
+symphony,org.b3log.symphony.cache,ArticleCache,getPerfectArticles,6,2,0,197,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,ArticleCache,loadPerfectArticles,22,1,0,210,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.cache,ArticleCache,putArticleAbstract,5,1,2,256,0,,
+symphony,org.b3log.symphony.cache,ArticleCache,getArticle,7,2,1,268,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,ArticleCache,putArticle,5,1,1,283,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,ArticleCache,removeArticle,4,1,1,295,0,,
+symphony,org.b3log.symphony.cache,CommentCache,getComment,7,2,1,43,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,CommentCache,putComment,3,1,1,58,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,CommentCache,removeComment,3,1,1,67,0,,
+symphony,org.b3log.symphony.cache,DomainCache,getDomains,13,2,1,58,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,DomainCache,loadDomains,10,1,0,79,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService
+symphony,org.b3log.symphony.cache,OptionCache,getOption,7,2,1,43,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,OptionCache,putOption,3,1,1,58,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,OptionCache,removeOption,3,1,1,67,0,,
+symphony,org.b3log.symphony.cache,TagCache,getTag,9,2,1,77,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,TagCache,putTag,4,1,1,96,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,TagCache,removeTag,8,2,1,107,0,,
+symphony,org.b3log.symphony.cache,TagCache,getURIByTitle,3,1,1,123,0,,
+symphony,org.b3log.symphony.cache,TagCache,getNewTags,6,2,0,133,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,TagCache,getIconTags,7,2,1,146,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,TagCache,getTags,6,2,0,162,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,TagCache,loadTags,5,1,0,175,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.cache,TagCache,loadNewTags,14,1,0,184,0,,
+symphony,org.b3log.symphony.cache,TagCache,loadIconTags,28,4,0,205,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs; org.b3log.symphony.model.Tag; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.cache,TagCache,loadAllTags,41,6,0,247,0,org.b3log.symphony.model.Tag,org.b3log.symphony.model.Tag; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.cache,UserCache,getAdmins,3,1,0,57,0,,
+symphony,org.b3log.symphony.cache,UserCache,putAdmins,4,1,1,66,0,,
+symphony,org.b3log.symphony.cache,UserCache,getUser,7,2,1,76,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,UserCache,getUserByName,7,2,1,91,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.cache,UserCache,putUser,5,1,1,106,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.cache,UserCache,removeUser,4,1,1,118,0,,
+symphony,org.b3log.symphony.event,ArticleAddAudioHandler,getEventType,3,1,0,52,0,,
+symphony,org.b3log.symphony.event,ArticleAddAudioHandler,action,6,1,1,62,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService
+symphony,org.b3log.symphony.event,ArticleAddNotifier,action,92,13,1,92,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.event,ArticleAddNotifier,getEventType,3,1,0,208,0,,
+symphony,org.b3log.symphony.event,ArticleBaiduSender,sendToBaidu,20,3,1,53,0,,
+symphony,org.b3log.symphony.event,ArticleBaiduSender,action,23,4,1,83,0,,
+symphony,org.b3log.symphony.event,ArticleBaiduSender,getEventType,3,1,0,112,0,,
+symphony,org.b3log.symphony.event,ArticleSearchAdder,action,18,5,1,56,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs; org.b3log.symphony.service.SearchMgmtService
+symphony,org.b3log.symphony.event,ArticleSearchAdder,getEventType,3,1,0,81,0,,
+symphony,org.b3log.symphony.event,ArticleSearchUpdater,action,18,5,1,56,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs; org.b3log.symphony.service.SearchMgmtService
+symphony,org.b3log.symphony.event,ArticleSearchUpdater,getEventType,3,1,0,81,0,,
+symphony,org.b3log.symphony.event,ArticleUpdateAudioHandler,getEventType,3,1,0,52,0,,
+symphony,org.b3log.symphony.event,ArticleUpdateAudioHandler,action,6,1,1,62,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService
+symphony,org.b3log.symphony.event,ArticleUpdateNotifier,action,56,8,1,93,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.repository.NotificationRepository; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.model.Article
+symphony,org.b3log.symphony.event,ArticleUpdateNotifier,getEventType,3,1,0,161,0,,
+symphony,org.b3log.symphony.event,CommentNotifier,action,181,26,1,134,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.util.JSONs; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.util.Emotions; org.b3log.symphony.processor.channel.ArticleChannel; org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.processor.channel.ArticleListChannel; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.MediaPlayers; org.b3log.symphony.service.ShortLinkQueryService
+symphony,org.b3log.symphony.event,CommentNotifier,getEventType,3,1,0,374,0,,
+symphony,org.b3log.symphony.event,CommentUpdateNotifier,action,45,6,1,81,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.repository.NotificationRepository; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.event,CommentUpdateNotifier,getEventType,3,1,0,132,0,,
+symphony,org.b3log.symphony.event,EventTypes,EventTypes,2,1,0,49,0,,
+symphony,org.b3log.symphony.model,Article,isDifferent,15,3,2,485,0,,
+symphony,org.b3log.symphony.model,Article,isInvalidArticleType,3,1,1,510,0,,
+symphony,org.b3log.symphony.model,Article,Article,2,1,0,520,0,,
+symphony,org.b3log.symphony.model,Character,getCharacter,8,3,2,65,0,,
+symphony,org.b3log.symphony.model,Character,createImage,11,1,1,82,0,,
+symphony,org.b3log.symphony.model,Comment,Comment,2,1,0,290,0,,
+symphony,org.b3log.symphony.model,Common,Common,2,1,0,844,0,,
+symphony,org.b3log.symphony.model,Domain,Domain,2,1,0,142,0,,
+symphony,org.b3log.symphony.model,Emotion,Emotion,2,1,0,75,0,,
+symphony,org.b3log.symphony.model,Follow,Follow,2,1,0,75,0,,
+symphony,org.b3log.symphony.model,Link,Link,2,1,0,155,0,,
+symphony,org.b3log.symphony.model,Liveness,calcPoint,38,4,1,92,0,,
+symphony,org.b3log.symphony.model,Liveness,Liveness,2,1,0,142,0,,
+symphony,org.b3log.symphony.model,Notification,Notification,2,1,0,231,0,,
+symphony,org.b3log.symphony.model,Operation,newOperation,6,1,3,324,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Headers
+symphony,org.b3log.symphony.model,Option,Option,2,1,0,146,0,,
+symphony,org.b3log.symphony.model,Permission,Permission,2,1,0,502,0,,
+symphony,org.b3log.symphony.model,Permission,hasPermission,8,3,2,508,0,,
+symphony,org.b3log.symphony.model,Pointtransfer,Pointtransfer,2,1,0,394,0,,
+symphony,org.b3log.symphony.model,Report,Report,2,1,0,173,0,,
+symphony,org.b3log.symphony.model,Reward,Reward,2,1,0,80,0,,
+symphony,org.b3log.symphony.model,Role,Role,2,1,0,91,0,,
+symphony,org.b3log.symphony.model,Tag,Tag,2,1,0,283,0,,
+symphony,org.b3log.symphony.model,Tag,useHead,12,3,2,289,0,,
+symphony,org.b3log.symphony.model,Tag,formatTags,44,11,1,311,0,org.b3log.symphony.model.Tag,org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.model,Tag,containsReservedTags,8,3,1,379,0,,
+symphony,org.b3log.symphony.model,Tag,containsWhiteListTags,8,3,1,395,0,,
+symphony,org.b3log.symphony.model,Tag,exists,8,3,2,411,0,,
+symphony,org.b3log.symphony.model,Tag,normalize,42,9,1,428,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.model,Tag,fillDescription,14,3,1,483,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.model,UserExt,UserExt,2,1,0,540,0,,
+symphony,org.b3log.symphony.model,UserExt,toCCString,36,7,1,546,0,,
+symphony,org.b3log.symphony.model,UserExt,isValidMailDomain,8,2,1,596,0,,
+symphony,org.b3log.symphony.model,UserExt,isReservedUserName,8,3,1,612,0,,
+symphony,org.b3log.symphony.model,UserExt,finishedGuide,3,1,1,627,0,,
+symphony,org.b3log.symphony.model,UserExt,getUserLink,3,1,1,637,0,org.b3log.symphony.model.UserExt,org.b3log.symphony.model.UserExt
+symphony,org.b3log.symphony.model,UserExt,getUserLink,3,1,1,647,0,,
+symphony,org.b3log.symphony.model,Verifycode,Verifycode,2,1,0,107,0,,
+symphony,org.b3log.symphony.model,Vote,Vote,2,1,0,91,0,,
+symphony,org.b3log.symphony.model.feed,RSSCategory,getTerm,3,1,0,41,0,,
+symphony,org.b3log.symphony.model.feed,RSSCategory,setTerm,3,1,1,50,0,,
+symphony,org.b3log.symphony.model.feed,RSSCategory,toString,3,1,0,59,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getAtomLink,3,1,0,164,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setAtomLink,3,1,1,173,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getLastBuildDate,3,1,0,182,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setLastBuildDate,3,1,1,191,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getGenerator,3,1,0,200,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setGenerator,3,1,1,209,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getLink,3,1,0,218,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setLink,3,1,1,227,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getTitle,3,1,0,236,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setTitle,3,1,1,245,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,addItem,3,1,1,254,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getDescription,3,1,0,263,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setDescription,3,1,1,272,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,getLanguage,3,1,0,281,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,setLanguage,3,1,1,290,0,,
+symphony,org.b3log.symphony.model.feed,RSSChannel,toString,28,2,0,299,0,org.b3log.symphony.model.feed.RSSItem,org.b3log.symphony.model.feed.RSSItem
+symphony,org.b3log.symphony.model.feed,RSSItem,getGUID,3,1,0,132,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setGUID,3,1,1,141,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,getAuthor,3,1,0,150,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setAuthor,3,1,1,159,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,getLink,3,1,0,168,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setLink,3,1,1,177,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,getTitle,3,1,0,186,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setTitle,3,1,1,195,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,getPubDate,3,1,0,204,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setPubDate,3,1,1,213,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,getDescription,3,1,0,222,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,setDescription,3,1,1,231,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,addCatetory,3,1,1,240,0,,
+symphony,org.b3log.symphony.model.feed,RSSItem,toString,25,2,0,249,0,org.b3log.symphony.model.feed.RSSCategory,org.b3log.symphony.model.feed.RSSCategory
+symphony,org.b3log.symphony.model.sitemap,Sitemap,addURL,3,1,1,59,0,,
+symphony,org.b3log.symphony.model.sitemap,Sitemap,toString,10,2,0,68,0,,
+symphony,org.b3log.symphony.processor,ActivityProcessor,register,22,1,0,118,0,,
+symphony,org.b3log.symphony.processor,ActivityProcessor,showCharacter,26,2,1,145,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.CharacterQueryService
+symphony,org.b3log.symphony.processor,ActivityProcessor,submitCharacter,21,1,1,184,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,showActivities,13,1,1,213,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ActivityProcessor,showDailyCheckin,15,2,1,233,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ActivityProcessor,dailyCheckin,6,1,1,255,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,yesterdayLivenessReward,7,1,1,268,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,show1A0001,59,7,1,283,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.processor,ActivityProcessor,bet1A0001,17,2,1,363,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,collect1A0001,6,1,1,386,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,showEatingSnake,19,1,1,400,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ActivityQueryService
+symphony,org.b3log.symphony.processor,ActivityProcessor,startEatingSnake,7,1,1,429,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,collectEatingSnake,14,1,1,444,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor,ActivityProcessor,showGobang,11,1,1,463,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ActivityProcessor,startGobang,11,2,1,481,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,AdminProcessor,register,74,1,0,310,0,,
+symphony,org.b3log.symphony.processor,AdminProcessor,showAuditlog,23,1,1,389,0,org.b3log.symphony.service.OperationQueryService,org.b3log.symphony.service.OperationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,makeReportIgnored,7,1,1,423,0,org.b3log.symphony.service.ReportMgmtService,org.b3log.symphony.service.ReportMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,makeReportHandled,7,1,1,437,0,org.b3log.symphony.model.Operation,org.b3log.symphony.model.Operation; org.b3log.symphony.service.ReportMgmtService; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,showReports,23,1,1,451,0,org.b3log.symphony.service.ReportQueryService,org.b3log.symphony.service.ReportQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeRole,17,2,1,486,0,org.b3log.symphony.service.RoleMgmtService,org.b3log.symphony.service.RoleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showBreezemoons,29,1,1,512,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showBreezemoon,9,1,1,552,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateBreezemoon,29,3,1,570,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.BreezemoonMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeBreezemoon,12,1,1,610,0,org.b3log.symphony.service.BreezemoonMgmtService,org.b3log.symphony.service.BreezemoonMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeUnusedTags,5,1,1,629,0,org.b3log.symphony.service.TagMgmtService,org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,addRole,15,2,1,640,0,org.b3log.symphony.service.RoleMgmtService,org.b3log.symphony.service.RoleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateRolePermissions,10,1,1,665,0,org.b3log.symphony.model.Operation,org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.RoleMgmtService; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.processor,AdminProcessor,showRolePermissions,19,2,1,684,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showRoles,8,1,1,717,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateSideAd,19,2,1,735,0,org.b3log.symphony.service.OptionMgmtService,org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateBanner,19,2,1,761,0,org.b3log.symphony.service.OptionMgmtService,org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAd,15,3,1,787,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAddTag,5,1,1,813,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,addTag,40,5,1,824,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.model.Tag; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,stickArticle,7,1,1,878,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,stickCancelArticle,7,1,1,892,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,generateInvitecodes,17,2,1,906,0,org.b3log.symphony.service.InvitecodeMgmtService,org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,showInvitecodes,25,1,1,933,0,org.b3log.symphony.service.InvitecodeQueryService,org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showInvitecode,8,1,1,969,0,org.b3log.symphony.service.InvitecodeQueryService,org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateInvitecode,24,2,1,985,0,org.b3log.symphony.service.InvitecodeMgmtService,org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAddArticle,5,1,1,1021,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,addArticle,50,2,1,1032,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,addReservedWord,31,3,1,1092,0,org.b3log.symphony.service.OptionMgmtService,org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAddReservedWord,5,1,1,1133,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateReservedWord,17,2,1,1144,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showReservedWords,8,1,1,1173,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showReservedWord,8,1,1,1187,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeReservedWord,9,1,1,1201,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeComment,7,1,1,1218,0,org.b3log.symphony.service.CommentMgmtService,org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeArticle,7,1,1,1233,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAdminIndex,9,1,1,1248,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showUsers,27,2,1,1266,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showUser,12,1,1,1304,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAddUser,5,1,1,1325,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,addUser,46,5,1,1336,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.util.Sessions; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.processor.middleware.validate.UserRegister2ValidationMidware; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateUser,0,31,1,1395,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateUserEmail,24,2,1,1477,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateUserName,24,2,1,1512,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,chargePoint,28,2,1,1547,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,abusePoint,32,2,1,1589,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,initPoint,25,3,1,1635,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.PointtransferQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,exchangePoint,32,2,1,1672,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showArticles,38,2,1,1718,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showArticle,9,1,1,1768,0,org.b3log.symphony.util.Escapes,org.b3log.symphony.util.Escapes; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateArticle,29,3,1,1785,0,org.b3log.symphony.processor.AdminProcessor,org.b3log.symphony.processor.AdminProcessor; org.b3log.symphony.model.Tag; org.b3log.symphony.model.Operation; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showComments,31,1,1,1837,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showComment,9,1,1,1879,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateComment,23,3,1,1897,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showMisc,7,1,1,1935,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateMisc,23,3,1,1950,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.OptionMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showTags,40,2,1,1987,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showTag,15,2,1,2039,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateTag,33,4,1,2065,0,org.b3log.symphony.service.TagMgmtService,org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showDomains,40,3,1,2118,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showDomain,8,1,1,2170,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateDomain,26,4,1,2187,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DomainMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,showAddDomain,5,1,1,2229,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,addDomain,36,3,1,2240,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.DomainMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeDomain,7,1,1,2289,0,org.b3log.symphony.service.DomainMgmtService,org.b3log.symphony.service.DomainMgmtService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,addDomainTag,60,7,1,2304,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DomainMgmtService; org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.model.Tag; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,removeDomainTag,16,2,1,2382,0,org.b3log.symphony.service.DomainMgmtService,org.b3log.symphony.service.DomainMgmtService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,AdminProcessor,rebuildArticleSearchIndex,34,7,1,2407,0,org.b3log.symphony.service.SearchMgmtService,org.b3log.symphony.service.SearchMgmtService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService
+symphony,org.b3log.symphony.processor,AdminProcessor,rebuildOneArticleSearchIndex,7,1,1,2454,0,org.b3log.symphony.processor.AdminProcessor,org.b3log.symphony.processor.AdminProcessor; org.b3log.symphony.model.Operation; org.b3log.symphony.service.OperationMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,AdminProcessor,updateArticleSearchIndex,13,4,1,2469,0,org.b3log.symphony.service.SearchMgmtService,org.b3log.symphony.service.SearchMgmtService
+symphony,org.b3log.symphony.processor,AfterRequestHandler,handle,19,4,1,50,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,ArticleProcessor,register,24,1,0,198,0,,
+symphony,org.b3log.symphony.processor,ArticleProcessor,removeArticle,29,4,1,227,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,checkArticleTitle,56,6,1,265,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,getArticleImage,52,5,1,338,0,org.b3log.symphony.model.Character,org.b3log.symphony.model.Character; org.b3log.symphony.service.CharacterQueryService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,getArticleRevisions,8,1,1,406,0,org.b3log.symphony.service.RevisionQueryService,org.b3log.symphony.service.RevisionQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,showPreAddArticle,6,1,1,420,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ArticleProcessor,fillDomainsWithTags,26,4,1,432,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,showAddArticle,73,13,1,468,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.model.Article; org.b3log.symphony.processor.ArticleProcessor; org.b3log.symphony.model.Tag; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ArticleProcessor,fillPostArticleRequisite,6,1,2,567,0,,
+symphony,org.b3log.symphony.processor,ArticleProcessor,showArticle,221,31,1,575,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.ReferralMgmtService; org.b3log.symphony.util.Headers; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.RevisionQueryService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.VoteQueryService; org.b3log.symphony.service.RewardQueryService; org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.processor,ArticleProcessor,addArticle,59,5,1,848,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.util.Headers
+symphony,org.b3log.symphony.processor,ArticleProcessor,showUpdateArticle,31,4,1,938,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.ArticleProcessor; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ArticleProcessor,updateArticle,76,9,1,985,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.util.Headers; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,markdown2HTML,18,2,1,1094,0,org.b3log.symphony.util.MediaPlayers,org.b3log.symphony.util.MediaPlayers; org.b3log.symphony.util.Markdowns; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Results; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.processor,ArticleProcessor,getArticlePreviewContent,9,2,1,1129,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,rewardArticle,24,3,1,1153,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,ArticleProcessor,thankArticle,21,3,1,1187,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService
+symphony,org.b3log.symphony.processor,ArticleProcessor,stickArticle,30,5,1,1217,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,BeforeRequestHandler,handle,9,1,1,61,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.BeforeRequestHandler
+symphony,org.b3log.symphony.processor,BeforeRequestHandler,resolveSkinDir,42,4,1,75,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.processor,BeforeRequestHandler,fillBotAttrs,23,6,1,128,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,register,11,1,0,97,0,,
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,showWatchBreezemoon,28,3,1,113,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.BreezemoonQueryService
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,addBreezemoon,30,3,1,153,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.BreezemoonProcessor; org.b3log.symphony.util.Geos; org.b3log.symphony.util.Headers; org.b3log.symphony.service.BreezemoonMgmtService
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,updateBreezemoon,33,4,1,200,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.BreezemoonProcessor; org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.BreezemoonMgmtService; org.b3log.symphony.util.Headers
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,removeBreezemoon,20,3,1,251,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.BreezemoonMgmtService
+symphony,org.b3log.symphony.processor,BreezemoonProcessor,isInvalid,17,3,2,280,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor,CaptchaProcessor,register,6,1,0,87,0,,
+symphony,org.b3log.symphony.processor,CaptchaProcessor,invalidCaptcha,10,3,1,98,0,,
+symphony,org.b3log.symphony.processor,CaptchaProcessor,get,35,3,1,117,0,org.b3log.symphony.processor.CaptchaProcessor,org.b3log.symphony.processor.CaptchaProcessor
+symphony,org.b3log.symphony.processor,CaptchaProcessor,getLoginCaptcha,42,5,1,162,0,org.b3log.symphony.processor.CaptchaProcessor,org.b3log.symphony.processor.CaptchaProcessor
+symphony,org.b3log.symphony.processor,CaptchaProcessor,renderImg,7,1,2,216,0,,
+symphony,org.b3log.symphony.processor,CaptchaProcessor,getAvaialbeFonts,13,3,0,224,0,,
+symphony,org.b3log.symphony.processor,ChatroomProcessor,register,9,1,0,128,0,,
+symphony,org.b3log.symphony.processor,ChatroomProcessor,addChatRoomMsg,33,2,1,142,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Markdowns; org.b3log.symphony.util.JSONs; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.processor.channel.ChatroomChannel; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.processor,ChatroomProcessor,showChatRoom,13,1,1,195,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,CityProcessor,showCityArticles,58,7,1,98,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,CityProcessor,showCityUsers,67,7,1,176,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,register,18,1,0,127,0,,
+symphony,org.b3log.symphony.processor,CommentProcessor,acceptComment,30,4,1,150,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,removeComment,30,4,1,190,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.CommentMgmtService
+symphony,org.b3log.symphony.processor,CommentProcessor,getCommentRevisions,9,1,1,230,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.RevisionQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,getCommentContent,17,3,1,245,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,CommentProcessor,updateComment,46,5,1,271,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Sessions; org.b3log.symphony.util.MediaPlayers; org.b3log.symphony.util.Markdowns; org.b3log.symphony.util.Headers; org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.processor,CommentProcessor,getOriginalComment,16,3,1,341,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.RewardQueryService; org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,getReplies,24,5,1,370,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.RewardQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,addComment,61,8,1,409,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Headers; org.b3log.symphony.service.FollowMgmtService; org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,CommentProcessor,thankComment,13,1,1,504,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentMgmtService
+symphony,org.b3log.symphony.processor,DomainProcessor,showDomainArticles,44,5,1,82,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,DomainProcessor,showDomains,12,1,1,144,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,ErrorProcessor,handle,27,3,1,75,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.processor,FeedProcessor,genRecentRSS,28,2,1,99,0,org.b3log.symphony.model.feed.RSSChannel,org.b3log.symphony.model.feed.RSSChannel; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.processor.FeedProcessor
+symphony,org.b3log.symphony.processor,FeedProcessor,genDomainRSS,35,3,1,134,0,org.b3log.symphony.model.feed.RSSChannel,org.b3log.symphony.model.feed.RSSChannel; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DomainQueryService; org.b3log.symphony.processor.FeedProcessor
+symphony,org.b3log.symphony.processor,FeedProcessor,getItem,27,2,2,178,0,org.b3log.symphony.model.feed.RSSItem,org.b3log.symphony.model.feed.RSSItem; org.b3log.symphony.util.Markdowns; org.b3log.symphony.model.feed.RSSCategory; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.processor,FileUploadProcessor,register,7,1,0,84,0,,
+symphony,org.b3log.symphony.processor,FileUploadProcessor,getFile,39,4,1,96,0,,
+symphony,org.b3log.symphony.processor,FileUploadProcessor,uploadFile,105,11,1,150,0,org.b3log.symphony.processor.FileUploadProcessor,org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.util.Results; org.b3log.symphony.util.Headers; org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.processor,FileUploadProcessor,fetchUpload,68,6,1,271,0,org.b3log.symphony.processor.FileUploadProcessor,org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.util.Results; org.b3log.symphony.util.Networks
+symphony,org.b3log.symphony.processor,FileUploadProcessor,genFilePath,4,1,1,352,0,,
+symphony,org.b3log.symphony.processor,FollowProcessor,register,14,1,0,81,0,,
+symphony,org.b3log.symphony.processor,FollowProcessor,followUser,15,2,1,100,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,FollowProcessor,unfollowUser,8,1,1,134,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.processor,FollowProcessor,followTag,8,1,1,156,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.processor,FollowProcessor,unfollowTag,8,1,1,178,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.processor,FollowProcessor,followArticle,17,2,1,200,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,FollowProcessor,unfollowArticle,8,1,1,232,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.processor,FollowProcessor,watchArticle,17,2,1,254,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.FollowMgmtService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,FollowProcessor,unwatchArticle,8,1,1,286,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.processor,ForwardProcessor,showForward,23,4,1,63,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Headers; org.b3log.symphony.service.LinkMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,IndexProcessor,register,16,1,0,106,0,,
+symphony,org.b3log.symphony.processor,IndexProcessor,showChangelogs,13,1,1,128,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.processor,IndexProcessor,showQnA,0,8,1,146,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,IndexProcessor,showWatch,36,7,1,214,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,IndexProcessor,showIndex,19,3,1,261,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,IndexProcessor,showRecent,0,10,1,292,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,IndexProcessor,showHotArticles,23,2,1,372,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,IndexProcessor,showPerfectArticles,34,4,1,403,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.processor,IndexProcessor,showAbout,3,1,1,447,0,,
+symphony,org.b3log.symphony.processor,IndexProcessor,showKillBrowser,8,1,1,458,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,IndexProcessor,showChargePoint,9,1,1,472,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,register,21,1,0,164,0,,
+symphony,org.b3log.symphony.processor,LoginProcessor,nextGuideStep,27,2,1,190,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,LoginProcessor,showGuide,24,4,1,227,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,showLogin,17,4,1,261,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,showForgetPwd,5,1,1,288,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,forgetPwd,29,2,1,299,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.VerifycodeMgmtService
+symphony,org.b3log.symphony.processor,LoginProcessor,showResetPwd,19,2,1,338,0,org.b3log.symphony.service.VerifycodeQueryService,org.b3log.symphony.service.VerifycodeQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,resetPwd,33,3,1,365,0,org.b3log.symphony.service.VerifycodeQueryService,org.b3log.symphony.service.VerifycodeQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.VerifycodeMgmtService; org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,LoginProcessor,showRegister,53,9,1,406,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.VerifycodeQueryService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.RoleQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,LoginProcessor,register,44,3,1,474,0,org.b3log.symphony.service.InvitecodeQueryService,org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.VerifycodeMgmtService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,LoginProcessor,register2,63,6,1,529,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,LoginProcessor,login,65,11,1,620,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,LoginProcessor,logout,14,4,1,705,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor,NotificationProcessor,register,19,1,0,94,0,,
+symphony,org.b3log.symphony.processor,NotificationProcessor,removeNotifications,0,7,1,118,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,NotificationProcessor,removeNotification,15,3,1,174,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.NotificationQueryService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showSysAnnounceNotifications,25,2,1,199,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,makeAllNotificationsRead,6,1,1,239,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,NotificationProcessor,makeNotificationReadByType,0,5,1,253,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,NotificationProcessor,makeNotificationRead,9,1,1,294,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,NotificationProcessor,navigateNotifications,44,9,1,311,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.NotificationQueryService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showPointNotifications,30,3,1,378,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,fillNotificationCount,19,1,2,424,0,org.b3log.symphony.service.NotificationQueryService,org.b3log.symphony.service.NotificationQueryService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showCommentedNotifications,29,3,1,467,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showReplyNotifications,29,3,1,510,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showAtNotifications,36,5,1,554,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showFollowingNotifications,29,3,1,607,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,showBroadcastNotifications,29,3,1,652,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.service.NotificationQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,NotificationProcessor,getUnreadNotificationCount,7,1,1,697,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.NotificationProcessor
+symphony,org.b3log.symphony.processor,ReportProcessor,report,29,1,1,66,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ReportMgmtService
+symphony,org.b3log.symphony.processor,Router,requestMapping,19,1,0,35,0,org.b3log.symphony.processor.Router,org.b3log.symphony.processor.Router
+symphony,org.b3log.symphony.processor,Router,registerProcessors,39,1,0,67,0,org.b3log.symphony.processor.BreezemoonProcessor,org.b3log.symphony.processor.BreezemoonProcessor; org.b3log.symphony.processor.ArticleProcessor; org.b3log.symphony.processor.CaptchaProcessor; org.b3log.symphony.processor.TagProcessor; org.b3log.symphony.processor.ActivityProcessor; org.b3log.symphony.processor.CommentProcessor; org.b3log.symphony.processor.TopProcessor; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.processor.FollowProcessor; org.b3log.symphony.processor.ChatroomProcessor; org.b3log.symphony.processor.SettingsProcessor; org.b3log.symphony.processor.NotificationProcessor; org.b3log.symphony.processor.AdminProcessor; org.b3log.symphony.processor.VoteProcessor; org.b3log.symphony.processor.IndexProcessor; org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.processor.LoginProcessor
+symphony,org.b3log.symphony.processor,SearchProcessor,search,73,12,1,89,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.SearchQueryService; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.processor,SettingsProcessor,register,26,1,0,185,0,,
+symphony,org.b3log.symphony.processor,SettingsProcessor,deactivateUser,13,1,1,216,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateUserName,21,2,1,236,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor,SettingsProcessor,sendEmailVC,48,6,1,269,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.CaptchaProcessor; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.VerifycodeQueryService; org.b3log.symphony.service.VerifycodeMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateEmail,32,3,1,329,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.service.VerifycodeMgmtService; org.b3log.symphony.service.VerifycodeQueryService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateI18n,33,3,1,370,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Languages; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,showSettings,62,6,1,415,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Languages; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.EmotionQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateGeoStatus,28,2,1,508,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updatePrivacy,49,1,1,546,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateFunction,72,8,1,606,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateProfiles,25,1,1,689,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateAvatar,34,4,1,722,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updatePassword,21,2,1,764,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,updateEmoji,15,1,1,795,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.EmotionMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,pointTransfer,28,4,1,819,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,SettingsProcessor,queryInvitecode,0,6,1,858,0,org.b3log.symphony.service.InvitecodeQueryService,org.b3log.symphony.service.InvitecodeQueryService
+symphony,org.b3log.symphony.processor,SettingsProcessor,pointBuy,25,4,1,906,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor,SettingsProcessor,exportPosts,13,3,1,946,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.PostExportService
+symphony,org.b3log.symphony.processor,SitemapProcessor,sitemap,11,1,1,51,0,org.b3log.symphony.service.SitemapQueryService,org.b3log.symphony.service.SitemapQueryService; org.b3log.symphony.model.sitemap.Sitemap
+symphony,org.b3log.symphony.processor,SkinRenderer,SkinRenderer,5,1,2,60,0,,
+symphony,org.b3log.symphony.processor,SkinRenderer,getTemplate,31,4,2,72,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Templates
+symphony,org.b3log.symphony.processor,SkinRenderer,getTemplate,5,1,0,116,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.SkinRenderer
+symphony,org.b3log.symphony.processor,SkinRenderer,genHTML,16,2,3,124,0,org.b3log.symphony.processor.SkinRenderer,org.b3log.symphony.processor.SkinRenderer
+symphony,org.b3log.symphony.processor,SkinRenderer,beforeRender,2,1,1,155,0,,
+symphony,org.b3log.symphony.processor,SkinRenderer,afterRender,2,1,1,159,0,,
+symphony,org.b3log.symphony.processor,SkinRenderer,isPJAX,5,1,1,163,0,,
+symphony,org.b3log.symphony.processor,StatisticProcessor,loadStatData,46,4,0,136,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.VisitMgmtService
+symphony,org.b3log.symphony.processor,StatisticProcessor,showStatistic,21,1,1,199,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,TagProcessor,register,9,1,0,92,0,,
+symphony,org.b3log.symphony.processor,TagProcessor,queryTags,21,4,1,106,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.TagQueryService
+symphony,org.b3log.symphony.processor,TagProcessor,showTagsWall,9,1,1,137,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,TagProcessor,showTagArticles,0,11,1,155,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.processor,TopProcessor,register,10,1,0,82,0,,
+symphony,org.b3log.symphony.processor,TopProcessor,showTop,10,1,1,97,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,TopProcessor,showLink,11,1,1,114,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.LinkQueryService
+symphony,org.b3log.symphony.processor,TopProcessor,showBalance,11,1,1,132,0,org.b3log.symphony.service.PointtransferQueryService,org.b3log.symphony.service.PointtransferQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,TopProcessor,showConsumption,11,1,1,150,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.processor,TopProcessor,showCheckin,11,1,1,168,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.ActivityQueryService
+symphony,org.b3log.symphony.processor,UserProcessor,register,20,1,0,166,0,,
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeBreezemoons,54,5,1,191,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeAnonymousComments,48,6,1,262,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showAnonymousArticles,49,6,1,332,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHome,48,5,1,404,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeComments,41,4,1,470,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeFollowingUsers,40,4,1,529,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeFollowingTags,40,4,1,589,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeFollowingArticles,40,4,1,649,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeWatchingArticles,40,4,1,709,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomeFollowers,44,5,1,769,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,showHomePoints,35,3,1,835,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.processor.UserProcessor; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.PointtransferQueryService; org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.processor,UserProcessor,listNames,21,3,1,888,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.util.Results
+symphony,org.b3log.symphony.processor,UserProcessor,getFrequentEmotions,22,4,1,919,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Emotions; org.b3log.symphony.service.EmotionQueryService; org.b3log.symphony.util.Results
+symphony,org.b3log.symphony.processor,UserProcessor,fillHomeUser,8,1,3,951,0,org.b3log.symphony.util.Escapes,org.b3log.symphony.util.Escapes; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.processor,VoteProcessor,register,10,1,0,97,0,,
+symphony,org.b3log.symphony.processor,VoteProcessor,voteUpComment,28,4,1,112,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.VoteQueryService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.VoteMgmtService
+symphony,org.b3log.symphony.processor,VoteProcessor,voteDownComment,19,3,1,163,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.VoteQueryService; org.b3log.symphony.service.VoteMgmtService
+symphony,org.b3log.symphony.processor,VoteProcessor,voteUpArticle,28,4,1,215,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.VoteQueryService; org.b3log.symphony.service.VoteMgmtService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.processor,VoteProcessor,voteDownArticle,19,3,1,266,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.VoteQueryService; org.b3log.symphony.service.VoteMgmtService
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,notifyHeat,11,3,1,72,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,notifyComment,85,12,1,95,0,org.b3log.symphony.util.Templates,org.b3log.symphony.util.Templates; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,onConnect,21,3,1,201,0,org.b3log.symphony.processor.channel.ArticleListChannel,org.b3log.symphony.processor.channel.ArticleListChannel; org.b3log.symphony.processor.channel.ArticleChannel
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,onClose,3,1,1,232,0,org.b3log.symphony.processor.channel.ArticleChannel,org.b3log.symphony.processor.channel.ArticleChannel
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,onMessage,2,1,1,242,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,onError,3,1,1,251,0,org.b3log.symphony.processor.channel.ArticleChannel,org.b3log.symphony.processor.channel.ArticleChannel
+symphony,org.b3log.symphony.processor.channel,ArticleChannel,removeSession,25,4,1,261,0,org.b3log.symphony.processor.channel.ArticleListChannel,org.b3log.symphony.processor.channel.ArticleListChannel; org.b3log.symphony.processor.channel.ArticleChannel
+symphony,org.b3log.symphony.processor.channel,ArticleListChannel,notifyHeat,12,3,1,45,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleListChannel,onConnect,7,2,1,69,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleListChannel,onClose,3,1,1,84,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleListChannel,onMessage,2,1,1,94,0,,
+symphony,org.b3log.symphony.processor.channel,ArticleListChannel,onError,3,1,1,103,0,,
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,onConnect,11,2,1,46,0,,
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,onClose,3,1,1,65,0,org.b3log.symphony.processor.channel.ChatroomChannel,org.b3log.symphony.processor.channel.ChatroomChannel
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,onMessage,2,1,1,75,0,,
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,onError,3,1,1,84,0,org.b3log.symphony.processor.channel.ChatroomChannel,org.b3log.symphony.processor.channel.ChatroomChannel
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,notifyChat,11,2,1,94,0,,
+symphony,org.b3log.symphony.processor.channel,ChatroomChannel,removeSession,11,2,1,116,0,,
+symphony,org.b3log.symphony.processor.channel,GobangChannel,onConnect,79,10,1,92,0,org.b3log.symphony.service.ActivityMgmtService,org.b3log.symphony.service.ActivityMgmtService; org.b3log.symphony.processor.channel.GobangChannel
+symphony,org.b3log.symphony.processor.channel,GobangChannel,onClose,3,1,1,183,0,org.b3log.symphony.processor.channel.GobangChannel,org.b3log.symphony.processor.channel.GobangChannel
+symphony,org.b3log.symphony.processor.channel,GobangChannel,onMessage,99,15,1,193,0,org.b3log.symphony.processor.channel.GobangChannel,org.b3log.symphony.processor.channel.GobangChannel; org.b3log.symphony.service.ActivityMgmtService; org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor.channel,GobangChannel,onError,3,1,1,298,0,org.b3log.symphony.processor.channel.GobangChannel,org.b3log.symphony.processor.channel.GobangChannel
+symphony,org.b3log.symphony.processor.channel,GobangChannel,removeSession,51,10,1,308,0,org.b3log.symphony.processor.channel.GobangChannel,org.b3log.symphony.processor.channel.GobangChannel; org.b3log.symphony.service.ActivityMgmtService
+symphony,org.b3log.symphony.processor.channel,GobangChannel,getAntiPlayer,11,4,1,363,0,,
+symphony,org.b3log.symphony.processor.channel,GobangChannel,recoverGame,13,1,4,375,0,,
+symphony,org.b3log.symphony.processor.channel,UserChannel,onConnect,15,2,1,53,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor.channel,UserChannel,onClose,3,1,1,79,0,org.b3log.symphony.processor.channel.UserChannel,org.b3log.symphony.processor.channel.UserChannel
+symphony,org.b3log.symphony.processor.channel,UserChannel,onMessage,13,2,1,89,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor.channel,UserChannel,onError,3,1,1,110,0,org.b3log.symphony.processor.channel.UserChannel,org.b3log.symphony.processor.channel.UserChannel
+symphony,org.b3log.symphony.processor.channel,UserChannel,sendCmd,15,5,1,120,0,,
+symphony,org.b3log.symphony.processor.channel,UserChannel,removeSession,22,4,1,145,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.processor.middleware,AnonymousViewCheckMidware,getCookie,12,4,2,85,0,,
+symphony,org.b3log.symphony.processor.middleware,AnonymousViewCheckMidware,addCookie,8,1,3,100,0,,
+symphony,org.b3log.symphony.processor.middleware,AnonymousViewCheckMidware,handle,79,14,1,110,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.processor.middleware.AnonymousViewCheckMidware
+symphony,org.b3log.symphony.processor.middleware,CSRFMidware,fill,9,2,1,51,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor.middleware,CSRFMidware,check,19,3,1,62,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.processor.middleware,LoginCheckMidware,handle,18,3,1,37,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.UserExt
+symphony,org.b3log.symphony.processor.middleware,PermissionMidware,check,46,3,1,71,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.Permission; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.processor.middleware,UserCheckMidware,handle,25,5,1,44,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,Activity1A0001CollectValidationMidware,handle,32,6,1,55,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,Activity1A0001ValidationMidware,handle,63,10,1,63,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.LivenessQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,ArticlePostValidationMidware,handle,129,23,1,78,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.model.Article; org.b3log.symphony.util.Emotions; org.b3log.symphony.model.Tag; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,ChatMsgAddValidationMidware,handle,25,4,1,65,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,CommentAddValidationMidware,handle,50,8,1,45,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,CommentUpdateValidationMidware,handle,22,3,1,69,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,PointTransferValidationMidware,handle,55,9,1,60,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.processor.middleware.validate,UpdatePasswordValidationMidware,handle,16,3,1,45,0,org.b3log.symphony.processor.middleware.validate.UserRegister2ValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegister2ValidationMidware
+symphony,org.b3log.symphony.processor.middleware.validate,UpdateProfilesValidationMidware,handle,78,15,1,75,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.processor.middleware.validate.UpdateProfilesValidationMidware; org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.processor.middleware.validate,UpdateProfilesValidationMidware,invalidUserURL,6,2,1,174,0,,
+symphony,org.b3log.symphony.processor.middleware.validate,UserForgetPwdValidationMidware,handle,16,3,1,46,0,org.b3log.symphony.processor.CaptchaProcessor,org.b3log.symphony.processor.CaptchaProcessor
+symphony,org.b3log.symphony.processor.middleware.validate,UserRegister2ValidationMidware,handle,22,4,1,67,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.processor.middleware.validate.UserRegister2ValidationMidware
+symphony,org.b3log.symphony.processor.middleware.validate,UserRegister2ValidationMidware,invalidUserPassword,3,1,1,96,0,,
+symphony,org.b3log.symphony.processor.middleware.validate,UserRegisterValidationMidware,invalidUserName,21,6,1,112,0,org.b3log.symphony.model.UserExt,org.b3log.symphony.model.UserExt
+symphony,org.b3log.symphony.processor.middleware.validate,UserRegisterValidationMidware,invalidUserPassword,3,1,1,152,0,,
+symphony,org.b3log.symphony.processor.middleware.validate,UserRegisterValidationMidware,handle,80,15,1,162,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.service.InvitecodeQueryService; org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.processor.CaptchaProcessor; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.repository,ArticleRepository,ArticleRepository,3,1,0,48,0,,
+symphony,org.b3log.symphony.repository,ArticleRepository,remove,4,1,1,55,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.repository,ArticleRepository,get,12,3,1,62,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.repository,ArticleRepository,update,5,1,3,79,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.repository,ArticleRepository,getRandomly,14,2,1,87,0,,
+symphony,org.b3log.symphony.repository,ArticleRepository,getByTitle,4,1,1,121,0,,
+symphony,org.b3log.symphony.repository,BreezemoonRepository,BreezemoonRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,CharacterRepository,CharacterRepository,3,1,0,33,0,,
+symphony,org.b3log.symphony.repository,CommentRepository,CommentRepository,3,1,0,78,0,,
+symphony,org.b3log.symphony.repository,CommentRepository,removeComment,47,7,1,85,0,org.b3log.symphony.repository.NotificationRepository,org.b3log.symphony.repository.NotificationRepository; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.repository,CommentRepository,remove,4,1,1,152,0,org.b3log.symphony.cache.CommentCache,org.b3log.symphony.cache.CommentCache
+symphony,org.b3log.symphony.repository,CommentRepository,get,12,3,1,159,0,org.b3log.symphony.cache.CommentCache,org.b3log.symphony.cache.CommentCache
+symphony,org.b3log.symphony.repository,CommentRepository,update,5,1,3,176,0,org.b3log.symphony.cache.CommentCache,org.b3log.symphony.cache.CommentCache
+symphony,org.b3log.symphony.repository,DomainRepository,DomainRepository,3,1,0,35,0,,
+symphony,org.b3log.symphony.repository,DomainRepository,getByTitle,4,1,1,42,0,,
+symphony,org.b3log.symphony.repository,DomainRepository,getByURI,4,1,1,54,0,,
+symphony,org.b3log.symphony.repository,DomainTagRepository,DomainTagRepository,3,1,0,37,0,,
+symphony,org.b3log.symphony.repository,DomainTagRepository,getByDomainId,4,1,3,44,0,,
+symphony,org.b3log.symphony.repository,DomainTagRepository,removeByDomainId,4,1,1,73,0,,
+symphony,org.b3log.symphony.repository,DomainTagRepository,getByTagId,4,1,3,84,0,,
+symphony,org.b3log.symphony.repository,EmotionRepository,EmotionRepository,3,1,0,38,0,,
+symphony,org.b3log.symphony.repository,EmotionRepository,getUserEmojis,15,4,1,45,0,,
+symphony,org.b3log.symphony.repository,EmotionRepository,removeByUserId,3,1,1,72,0,,
+symphony,org.b3log.symphony.repository,FollowRepository,FollowRepository,3,1,0,39,0,,
+symphony,org.b3log.symphony.repository,FollowRepository,removeByFollowerIdAndFollowingId,7,2,3,46,0,org.b3log.symphony.repository.FollowRepository,org.b3log.symphony.repository.FollowRepository
+symphony,org.b3log.symphony.repository,FollowRepository,getByFollowerIdAndFollowingId,8,1,3,62,0,,
+symphony,org.b3log.symphony.repository,FollowRepository,exists,3,1,3,80,0,org.b3log.symphony.repository.FollowRepository,org.b3log.symphony.repository.FollowRepository
+symphony,org.b3log.symphony.repository,FollowRepository,getByFollowingId,4,1,4,93,0,,
+symphony,org.b3log.symphony.repository,InvitecodeRepository,InvitecodeRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,LinkRepository,getLink,11,1,1,47,0,,
+symphony,org.b3log.symphony.repository,LinkRepository,LinkRepository,3,1,0,65,0,,
+symphony,org.b3log.symphony.repository,LivenessRepository,LivenessRepository,3,1,0,35,0,,
+symphony,org.b3log.symphony.repository,LivenessRepository,removeByUserId,3,1,1,42,0,,
+symphony,org.b3log.symphony.repository,LivenessRepository,getByUserAndDate,4,1,2,52,0,,
+symphony,org.b3log.symphony.repository,NotificationRepository,NotificationRepository,3,1,0,42,0,,
+symphony,org.b3log.symphony.repository,NotificationRepository,removeByDataId,3,1,1,49,0,,
+symphony,org.b3log.symphony.repository,NotificationRepository,hasSentByDataIdAndType,9,1,3,59,0,,
+symphony,org.b3log.symphony.repository,NotificationRepository,removeByUserId,3,1,1,80,0,,
+symphony,org.b3log.symphony.repository,OperationRepository,OperationRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,OptionRepository,OptionRepository,3,1,0,45,0,,
+symphony,org.b3log.symphony.repository,OptionRepository,remove,4,1,1,52,0,org.b3log.symphony.cache.OptionCache,org.b3log.symphony.cache.OptionCache
+symphony,org.b3log.symphony.repository,OptionRepository,get,12,3,1,59,0,org.b3log.symphony.cache.OptionCache,org.b3log.symphony.cache.OptionCache
+symphony,org.b3log.symphony.repository,OptionRepository,update,5,1,3,76,0,org.b3log.symphony.cache.OptionCache,org.b3log.symphony.cache.OptionCache
+symphony,org.b3log.symphony.repository,PermissionRepository,PermissionRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,PointtransferRepository,getActivityEatingSnakeAvg,16,3,1,46,0,,
+symphony,org.b3log.symphony.repository,PointtransferRepository,PointtransferRepository,3,1,0,79,0,,
+symphony,org.b3log.symphony.repository,ReferralRepository,getByDataIdAndIP,4,1,2,35,0,,
+symphony,org.b3log.symphony.repository,ReferralRepository,ReferralRepository,3,1,0,50,0,,
+symphony,org.b3log.symphony.repository,ReportRepository,ReportRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,RevisionRepository,RevisionRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,RewardRepository,removeByDataId,3,1,1,34,0,,
+symphony,org.b3log.symphony.repository,RewardRepository,RewardRepository,3,1,0,45,0,,
+symphony,org.b3log.symphony.repository,RolePermissionRepository,RolePermissionRepository,3,1,0,38,0,,
+symphony,org.b3log.symphony.repository,RolePermissionRepository,removeByRoleId,3,1,1,45,0,,
+symphony,org.b3log.symphony.repository,RolePermissionRepository,getByRoleId,3,1,1,55,0,,
+symphony,org.b3log.symphony.repository,RoleRepository,RoleRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,TagArticleRepository,TagArticleRepository,3,1,0,39,0,,
+symphony,org.b3log.symphony.repository,TagArticleRepository,removeByArticleId,6,2,1,46,0,org.b3log.symphony.repository.TagArticleRepository,org.b3log.symphony.repository.TagArticleRepository
+symphony,org.b3log.symphony.repository,TagArticleRepository,getByArticleId,4,1,1,59,0,,
+symphony,org.b3log.symphony.repository,TagArticleRepository,getByTagId,4,1,3,80,0,,
+symphony,org.b3log.symphony.repository,TagRepository,TagRepository,3,1,0,54,0,,
+symphony,org.b3log.symphony.repository,TagRepository,add,5,1,1,61,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.repository,TagRepository,remove,4,1,1,70,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.repository,TagRepository,update,5,1,3,77,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.repository,TagRepository,get,12,3,1,85,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.repository,TagRepository,getURIByTitle,3,1,1,103,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.repository,TagRepository,getByURI,5,1,1,113,0,,
+symphony,org.b3log.symphony.repository,TagRepository,getByTitle,4,1,1,127,0,,
+symphony,org.b3log.symphony.repository,TagRepository,getMostUsedTags,4,1,1,139,0,,
+symphony,org.b3log.symphony.repository,TagRepository,getByArticleId,10,2,1,153,0,org.b3log.symphony.repository.TagArticleRepository,org.b3log.symphony.repository.TagArticleRepository; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.repository,TagTagRepository,TagTagRepository,3,1,0,41,0,,
+symphony,org.b3log.symphony.repository,TagTagRepository,getByTag1Id,7,1,3,48,0,,
+symphony,org.b3log.symphony.repository,TagTagRepository,getByTag2Id,7,1,3,82,0,,
+symphony,org.b3log.symphony.repository,TagTagRepository,getByTag1IdAndTag2Id,7,1,2,116,0,,
+symphony,org.b3log.symphony.repository,UserRepository,UserRepository,3,1,0,48,0,,
+symphony,org.b3log.symphony.repository,UserRepository,get,12,3,1,55,0,org.b3log.symphony.cache.UserCache,org.b3log.symphony.cache.UserCache
+symphony,org.b3log.symphony.repository,UserRepository,update,10,2,3,73,0,org.b3log.symphony.cache.UserCache,org.b3log.symphony.cache.UserCache; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.repository,UserRepository,getByName,13,3,1,86,0,org.b3log.symphony.cache.UserCache,org.b3log.symphony.cache.UserCache
+symphony,org.b3log.symphony.repository,UserRepository,getByEmail,4,1,1,108,0,,
+symphony,org.b3log.symphony.repository,UserRepository,getAdmins,9,2,0,120,0,org.b3log.symphony.cache.UserCache,org.b3log.symphony.cache.UserCache
+symphony,org.b3log.symphony.repository,UserRepository,getAnonymousUser,3,1,0,139,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.repository,UserRoleRepository,UserRoleRepository,3,1,0,35,0,,
+symphony,org.b3log.symphony.repository,UserTagRepository,UserTagRepository,3,1,0,38,0,,
+symphony,org.b3log.symphony.repository,UserTagRepository,removeByUserIdAndTagId,4,1,3,45,0,,
+symphony,org.b3log.symphony.repository,UserTagRepository,getByUserId,4,1,3,61,0,,
+symphony,org.b3log.symphony.repository,UserTagRepository,getByTagId,4,1,3,89,0,,
+symphony,org.b3log.symphony.repository,VerifycodeRepository,VerifycodeRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,VisitRepository,VisitRepository,3,1,0,34,0,,
+symphony,org.b3log.symphony.repository,VisitRepository,removeByUserId,3,1,1,41,0,,
+symphony,org.b3log.symphony.repository,VoteRepository,removeByDataId,3,1,1,39,0,,
+symphony,org.b3log.symphony.repository,VoteRepository,removeIfExists,13,2,3,50,0,,
+symphony,org.b3log.symphony.repository,VoteRepository,VoteRepository,3,1,0,73,0,,
+symphony,org.b3log.symphony,Server,main,134,11,1,59,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache; org.b3log.symphony.cache.DomainCache; org.b3log.symphony.service.CronMgmtService; org.b3log.symphony.processor.Router; org.b3log.symphony.service.InitMgmtService
+symphony,org.b3log.symphony,RepositoryJSONGen,main,3,1,1,34,0,,
+symphony,org.b3log.symphony.service,ActivityMgmtService,startEatingSnake,12,2,1,128,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.PointtransferRepository
+symphony,org.b3log.symphony.service,ActivityMgmtService,collectEatingSnake,17,3,2,149,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService
+symphony,org.b3log.symphony.service,ActivityMgmtService,submitCharacter,74,6,3,178,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.util.Tesseracts
+symphony,org.b3log.symphony.service,ActivityMgmtService,dailyCheckin,64,7,1,268,0,org.b3log.symphony.service.ActivityQueryService,org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.service,ActivityMgmtService,bet1A0001,16,3,3,358,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.ActivityQueryService
+symphony,org.b3log.symphony.service,ActivityMgmtService,collect1A0001,67,10,1,387,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.service,ActivityMgmtService,yesterdayLivenessReward,18,5,1,466,0,org.b3log.symphony.service.LivenessQueryService,org.b3log.symphony.service.LivenessQueryService; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.model.Liveness
+symphony,org.b3log.symphony.service,ActivityMgmtService,startGobang,12,2,1,497,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService
+symphony,org.b3log.symphony.service,ActivityMgmtService,collectGobang,11,2,2,518,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService
+symphony,org.b3log.symphony.service,ActivityQueryService,getEatingSnakeAvgPoint,3,1,1,80,0,org.b3log.symphony.repository.PointtransferRepository,org.b3log.symphony.repository.PointtransferRepository
+symphony,org.b3log.symphony.service,ActivityQueryService,getTopEatingSnakeUsersMax,14,2,1,91,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,getTopEatingSnakeUsersSum,14,2,1,127,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,getTopCheckinUsers,22,3,1,163,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,isCheckedinToday,24,3,1,192,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,is1A0001Today,10,2,1,226,0,org.b3log.symphony.service.PointtransferQueryService,org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,isCollected1A0001Today,10,2,1,247,0,org.b3log.symphony.service.PointtransferQueryService,org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.service,ActivityQueryService,isCollectedYesterdayLivenessReward,10,2,1,268,0,org.b3log.symphony.service.PointtransferQueryService,org.b3log.symphony.service.PointtransferQueryService
+symphony,org.b3log.symphony.service,ArticleMgmtService,tagExists,8,3,2,216,0,,
+symphony,org.b3log.symphony.service,ArticleMgmtService,removeArticle,35,7,1,234,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.RewardQueryService; org.b3log.symphony.service.ArticleMgmtService
+symphony,org.b3log.symphony.service,ArticleMgmtService,genArticleAudio,46,6,1,292,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.util.Emotions; org.b3log.symphony.util.Runes; org.b3log.symphony.service.AudioMgmtService
+symphony,org.b3log.symphony.service,ArticleMgmtService,removeArticleByAdmin,66,10,1,347,0,org.b3log.symphony.repository.NotificationRepository,org.b3log.symphony.repository.NotificationRepository; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.SearchMgmtService; org.b3log.symphony.service.AudioMgmtService; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.repository.VoteRepository; org.b3log.symphony.repository.TagArticleRepository; org.b3log.symphony.repository.RewardRepository; org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,incArticleViewCount,40,6,1,435,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.VisitMgmtService; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,addArticle,222,27,1,484,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.Tag; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.util.Pangu; org.b3log.symphony.repository.OptionRepository; org.b3log.symphony.util.Runes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleMgmtService,updateArticle,152,18,1,787,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.util.JSONs; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.repository.OptionRepository; org.b3log.symphony.util.Pangu; org.b3log.symphony.util.Runes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleMgmtService,updateArticleByAdmin,51,7,2,995,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.repository.TagArticleRepository; org.b3log.symphony.util.Runes; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleMgmtService,reward,58,12,2,1076,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.RewardMgmtService; org.b3log.symphony.service.RewardQueryService
+symphony,org.b3log.symphony.service,ArticleMgmtService,thank,59,11,2,1159,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.RewardMgmtService; org.b3log.symphony.service.RewardQueryService
+symphony,org.b3log.symphony.service,ArticleMgmtService,stick,40,8,1,1243,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,adminStick,13,2,1,1302,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,adminCancelStick,13,2,1,1323,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,expireStick,26,5,0,1344,0,,
+symphony,org.b3log.symphony.service,ArticleMgmtService,processTagsForArticleUpdate,74,14,3,1379,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository; org.b3log.symphony.model.Tag; org.b3log.symphony.service.ArticleMgmtService
+symphony,org.b3log.symphony.service,ArticleMgmtService,removeTagArticleRelations,16,4,2,1488,0,org.b3log.symphony.repository.TagArticleRepository,org.b3log.symphony.repository.TagArticleRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,removeUserTagRelations,5,2,3,1518,0,org.b3log.symphony.repository.UserTagRepository,org.b3log.symphony.repository.UserTagRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,tag,100,7,3,1532,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.UserTagRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,ArticleMgmtService,filterReservedTags,13,4,1,1658,0,,
+symphony,org.b3log.symphony.service,ArticleMgmtService,addArticleByAdmin,93,6,1,1681,0,org.b3log.symphony.model.Tag,org.b3log.symphony.model.Tag; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.OptionRepository; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getQuestionArticles,0,6,3,167,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.RewardQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getFollowingUserArticles,32,3,3,273,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getFollowingTagArticles,27,2,3,320,0,org.b3log.symphony.service.FollowQueryService,org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getNextPermalink,21,2,1,359,0,org.b3log.symphony.util.Escapes,org.b3log.symphony.util.Escapes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getPreviousPermalink,21,2,1,396,0,org.b3log.symphony.util.Escapes,org.b3log.symphony.util.Escapes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleByTitle,9,1,1,434,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleCntInDay,13,1,1,450,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleCntInMonth,13,1,1,476,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,getValidArticles,26,3,3,502,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,getDomainArticles,55,7,3,538,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.repository.DomainTagRepository
+symphony,org.b3log.symphony.service,ArticleQueryService,getRelevantArticles,57,10,2,615,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.TagArticleRepository
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticlesByTags,35,6,4,688,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticlesByCity,14,1,3,742,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticlesByTag,0,16,4,767,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleById,32,3,1,883,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.util.JSONs; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticle,10,1,1,927,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticlePreviewContent,48,9,2,945,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.Markdowns; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Emotions; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getUserArticles,22,2,4,1011,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getSideHotArticles,3,1,0,1047,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.service,ArticleQueryService,getSideRandomArticles,3,1,0,1056,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.service,ArticleQueryService,makeArticleShowingFilter,6,1,0,1065,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,makeRecentArticleShowingFilter,9,1,0,1077,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,makeQuestionArticleShowingFilter,8,1,0,1093,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,makeTopQuery,5,1,2,1108,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getRecentArticles,0,5,3,1124,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,ArticleQueryService,getIndexRecentArticles,35,5,0,1219,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getHotArticles,34,3,1,1269,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getPerfectArticles,27,1,2,1316,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getIndexPerfectArticles,3,1,0,1373,0,org.b3log.symphony.cache.ArticleCache,org.b3log.symphony.cache.ArticleCache
+symphony,org.b3log.symphony.service,ArticleQueryService,organizeArticles,26,1,1,1382,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,organizeArticle,55,7,1,1411,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.util.Images; org.b3log.symphony.util.Escapes; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleThumbnail,47,12,1,1502,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.service,ArticleQueryService,toArticleDate,13,1,1,1561,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,genArticleAuthor,15,2,1,1580,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,genParticipants,16,3,2,1602,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleLatestParticipants,42,7,2,1626,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,processArticleContent,71,9,1,1700,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.MediaPlayers; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticles,31,3,2,1804,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,ArticleQueryService,markdown,21,3,1,1867,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleMetaDesc,105,21,1,1907,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.cache.ArticleCache; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,ArticleQueryService,getArticleToC,31,4,1,2044,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,addListProjections,3,1,1,2087,0,,
+symphony,org.b3log.symphony.service,ArticleQueryService,getStickArticles,10,1,0,2119,0,,
+symphony,org.b3log.symphony.service,AudioMgmtService,refreshBaiduAccessToken,24,3,0,67,0,,
+symphony,org.b3log.symphony.service,AudioMgmtService,baiduTTS,39,5,2,98,0,org.b3log.symphony.service.AudioMgmtService,org.b3log.symphony.service.AudioMgmtService
+symphony,org.b3log.symphony.service,AudioMgmtService,removeAudioFile,30,3,1,152,0,,
+symphony,org.b3log.symphony.service,AudioMgmtService,tts,45,4,4,187,0,org.b3log.symphony.processor.FileUploadProcessor,org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.service.AudioMgmtService
+symphony,org.b3log.symphony.service,AvatarQueryService,fillUserAvatarURL,5,1,1,47,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,AvatarQueryService,getDefaultAvatarURL,6,2,1,58,0,,
+symphony,org.b3log.symphony.service,AvatarQueryService,getAvatarURLByUser,41,9,2,72,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.service,AvatarQueryService,createAvatar,37,9,2,121,0,,
+symphony,org.b3log.symphony.service,BreezemoonMgmtService,addBreezemoon,27,3,1,75,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.service,BreezemoonMgmtService,updateBreezemoon,36,4,1,116,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.service,BreezemoonMgmtService,removeBreezemoon,9,1,1,170,0,,
+symphony,org.b3log.symphony.service,BreezemoonQueryService,getSideBreezemoons,35,6,1,95,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService
+symphony,org.b3log.symphony.service,BreezemoonQueryService,getFollowingUserBreezemoons,37,4,4,143,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.service,BreezemoonQueryService,getBreezemoons,35,2,5,209,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService
+symphony,org.b3log.symphony.service,BreezemoonQueryService,getBreezemoons,34,2,2,268,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService
+symphony,org.b3log.symphony.service,BreezemoonQueryService,getBreezemoon,9,1,1,330,0,,
+symphony,org.b3log.symphony.service,BreezemoonQueryService,organizeBreezemoons,28,3,2,346,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.util.Images; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CacheMgmtService,refreshCache,22,2,0,97,0,org.b3log.symphony.service.CacheMgmtService,org.b3log.symphony.service.CacheMgmtService; org.b3log.symphony.cache.ArticleCache; org.b3log.symphony.cache.TagCache; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.cache.DomainCache; org.b3log.symphony.processor.StatisticProcessor
+symphony,org.b3log.symphony.service,CacheMgmtService,statusReport,22,1,0,122,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.util.Symphonys
+symphony,org.b3log.symphony.service,CacheMgmtService,lock,12,3,1,146,0,,
+symphony,org.b3log.symphony.service,CacheMgmtService,unlock,8,2,1,168,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getTotalCharacterCount,3,1,0,64,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getWrittenCharacterCount,13,2,0,73,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getWrittenCharacters,9,1,0,95,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getWrittenCharacterCount,10,1,1,113,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacter,7,2,1,132,0,org.b3log.symphony.service.CharacterQueryService,org.b3log.symphony.service.CharacterQueryService
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacterOneByOne,22,4,1,147,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacterRandom,22,3,1,184,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacter,7,2,0,222,0,org.b3log.symphony.service.CharacterQueryService,org.b3log.symphony.service.CharacterQueryService
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacterRandom,21,3,0,236,0,,
+symphony,org.b3log.symphony.service,CharacterQueryService,getUnwrittenCharacterOneByOne,21,4,0,270,0,,
+symphony,org.b3log.symphony.service,CommentMgmtService,acceptComment,47,5,1,152,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.RewardMgmtService; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentMgmtService,removeComment,29,6,1,212,0,org.b3log.symphony.service.CommentMgmtService,org.b3log.symphony.service.CommentMgmtService; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.RewardQueryService
+symphony,org.b3log.symphony.service,CommentMgmtService,removeCommentByAdmin,8,1,1,261,0,org.b3log.symphony.repository.CommentRepository,org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentMgmtService,thankComment,60,11,2,276,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.RewardMgmtService; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.RewardQueryService; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,CommentMgmtService,addComment,162,17,1,363,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.repository.TagArticleRepository; org.b3log.symphony.repository.OptionRepository; org.b3log.symphony.util.Emotions; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,CommentMgmtService,updateComment,55,6,2,592,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.Runes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CommentMgmtService,updateCommentByAdmin,26,3,2,668,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.util.Runes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CommentQueryService,getCommentURL,21,3,3,112,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.Escapes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CommentQueryService,getOfferedComment,24,2,2,145,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,getCommentPage,23,3,4,182,0,,
+symphony,org.b3log.symphony.service,CommentQueryService,getOriginalComment,35,4,3,222,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentQueryService,getReplies,41,5,3,277,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository
+symphony,org.b3log.symphony.service,CommentQueryService,getNiceComments,22,2,3,339,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,getCommentCntInDay,13,1,1,377,0,,
+symphony,org.b3log.symphony.service,CommentQueryService,getCommentCntInMonth,13,1,1,403,0,,
+symphony,org.b3log.symphony.service,CommentQueryService,getCommentById,14,2,1,429,0,org.b3log.symphony.repository.CommentRepository,org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,getComment,10,1,1,453,0,org.b3log.symphony.repository.CommentRepository,org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentQueryService,getUserComments,26,3,2,474,0,org.b3log.symphony.repository.CommentRepository,org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,extracted,61,11,4,519,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CommentQueryService,getArticleComments,21,2,4,598,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,getJsonObjects,20,1,4,633,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentQueryService,extracted,22,5,4,653,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.service.RevisionQueryService; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,CommentQueryService,getComments,40,3,2,685,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CommentQueryService,organizeComments,29,2,1,759,0,,
+symphony,org.b3log.symphony.service,CommentQueryService,organizeComment,26,2,1,792,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.CommentQueryService
+symphony,org.b3log.symphony.service,CommentQueryService,processCommentContent,15,2,1,838,0,org.b3log.symphony.util.MediaPlayers,org.b3log.symphony.util.MediaPlayers; org.b3log.symphony.util.Markdowns; org.b3log.symphony.service.ShortLinkQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,CronMgmtService,start,70,1,0,105,0,org.b3log.symphony.service.CacheMgmtService,org.b3log.symphony.service.CacheMgmtService; org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.MailMgmtService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.service.InvitecodeMgmtService; org.b3log.symphony.service.VerifycodeMgmtService
+symphony,org.b3log.symphony.service,CronMgmtService,stop,3,1,0,169,0,,
+symphony,org.b3log.symphony.service,DataModelService,fillRelevantArticles,14,2,2,138,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillLatestCmts,9,1,1,161,0,,
+symphony,org.b3log.symphony.service,DataModelService,fillRandomArticles,9,1,1,176,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillSideHotArticles,9,1,1,190,0,org.b3log.symphony.service.ArticleQueryService,org.b3log.symphony.service.ArticleQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillSideTags,10,1,1,204,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService; org.b3log.symphony.service.TagQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillIndexTags,20,3,1,219,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillHeader,18,1,2,247,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.service,DataModelService,fillPermission,16,1,1,274,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillDomainNav,9,1,1,297,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache
+symphony,org.b3log.symphony.service,DataModelService,fillFooter,9,1,1,311,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.service,DataModelService,fillHeaderAndFooter,19,1,2,327,0,org.b3log.symphony.service.DataModelService,org.b3log.symphony.service.DataModelService
+symphony,org.b3log.symphony.service,DataModelService,fillPersonalNav,44,3,1,353,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.service.ActivityQueryService; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.model.UserExt; org.b3log.symphony.service.LivenessQueryService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillMinified,0,3,1,412,0,,
+symphony,org.b3log.symphony.service,DataModelService,fillSideBreezemoons,14,1,1,430,0,org.b3log.symphony.service.BreezemoonQueryService,org.b3log.symphony.service.BreezemoonQueryService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.service,DataModelService,fillLangs,9,1,1,449,0,,
+symphony,org.b3log.symphony.service,DataModelService,fillSideAd,9,2,1,463,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillSideTips,14,4,1,477,0,,
+symphony,org.b3log.symphony.service,DataModelService,fillHeaderBanner,9,2,1,499,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillNewTags,3,1,1,513,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService
+symphony,org.b3log.symphony.service,DataModelService,fillSysInfo,3,1,1,522,0,,
+symphony,org.b3log.symphony.service,DomainMgmtService,removeDomainTag,18,2,2,79,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache
+symphony,org.b3log.symphony.service,DomainMgmtService,addDomainTag,13,1,1,112,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache
+symphony,org.b3log.symphony.service,DomainMgmtService,addDomain,29,1,1,134,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,DomainMgmtService,updateDomain,9,1,2,177,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache
+symphony,org.b3log.symphony.service,DomainMgmtService,removeDomain,14,1,1,195,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache; org.b3log.symphony.repository.DomainTagRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,DomainQueryService,getAllDomains,15,2,0,82,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService
+symphony,org.b3log.symphony.service,DomainQueryService,getMostTagNaviDomains,15,2,1,106,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService
+symphony,org.b3log.symphony.service,DomainQueryService,getTags,16,2,1,132,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,DomainQueryService,getByURI,33,7,1,155,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.DomainRepository
+symphony,org.b3log.symphony.service,DomainQueryService,getByTitle,32,7,1,203,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.DomainRepository
+symphony,org.b3log.symphony.service,DomainQueryService,getDomains,29,3,2,249,0,,
+symphony,org.b3log.symphony.service,DomainQueryService,getDomain,12,1,1,313,0,org.b3log.symphony.service.DomainQueryService,org.b3log.symphony.service.DomainQueryService
+symphony,org.b3log.symphony.service,DomainQueryService,containTag,18,3,2,333,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,EmotionMgmtService,setEmotionList,29,4,2,59,0,org.b3log.symphony.repository.EmotionRepository,org.b3log.symphony.repository.EmotionRepository; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,EmotionQueryService,getEmojis,13,2,1,56,0,org.b3log.symphony.repository.EmotionRepository,org.b3log.symphony.repository.EmotionRepository
+symphony,org.b3log.symphony.service,FollowMgmtService,followTag,9,1,2,68,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,followUser,9,1,2,84,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,followArticle,9,1,2,100,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,watchArticle,9,1,2,116,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,unfollowTag,9,1,2,132,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,unfollowUser,9,1,2,148,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,unfollowArticle,9,1,2,164,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,unwatchArticle,9,1,2,181,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService
+symphony,org.b3log.symphony.service,FollowMgmtService,follow,38,8,3,197,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.FollowRepository; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,FollowMgmtService,unfollow,40,10,3,251,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.FollowRepository; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,FollowQueryService,isFollowing,13,1,3,86,0,org.b3log.symphony.repository.FollowRepository,org.b3log.symphony.repository.FollowRepository
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowingUsers,28,4,3,107,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowingTags,32,3,3,156,0,org.b3log.symphony.repository.FollowRepository,org.b3log.symphony.repository.FollowRepository; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowingArticles,26,3,3,207,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.service,FollowQueryService,getWatchingArticles,26,3,3,253,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.service.FollowQueryService
+symphony,org.b3log.symphony.service,FollowQueryService,getArticleWatchers,25,3,4,297,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowerUsers,25,3,3,341,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.FollowQueryService; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowingCount,19,1,2,384,0,,
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowerCount,13,1,2,409,0,,
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowings,13,1,4,429,0,,
+symphony,org.b3log.symphony.service,FollowQueryService,getFollowers,13,1,4,465,0,,
+symphony,org.b3log.symphony.service,InitMgmtService,initSym,370,9,0,217,0,org.b3log.symphony.service.ArticleMgmtService,org.b3log.symphony.service.ArticleMgmtService; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,InvitecodeMgmtService,expireInvitecodes,23,2,0,59,0,,
+symphony,org.b3log.symphony.service,InvitecodeMgmtService,userGenInvitecode,23,2,2,93,0,,
+symphony,org.b3log.symphony.service,InvitecodeMgmtService,adminGenInvitecodes,22,3,2,129,0,,
+symphony,org.b3log.symphony.service,InvitecodeMgmtService,updateInvitecode,14,2,2,161,0,,
+symphony,org.b3log.symphony.service,InvitecodeQueryService,getValidInvitecodes,10,1,1,58,0,,
+symphony,org.b3log.symphony.service,InvitecodeQueryService,getInvitecode,10,1,1,84,0,,
+symphony,org.b3log.symphony.service,InvitecodeQueryService,getInvitecodes,23,1,1,100,0,,
+symphony,org.b3log.symphony.service,InvitecodeQueryService,getInvitecodeById,9,1,1,153,0,,
+symphony,org.b3log.symphony.service,InvitecodeQueryService,getInvitecodeByUserId,10,1,1,176,0,,
+symphony,org.b3log.symphony.service,LinkMgmtService,addLink,43,5,1,62,0,org.b3log.symphony.repository.LinkRepository,org.b3log.symphony.repository.LinkRepository; org.b3log.symphony.util.Links; org.b3log.symphony.service.LinkMgmtService
+symphony,org.b3log.symphony.service,LinkMgmtService,addLink,21,3,1,116,0,org.b3log.symphony.repository.LinkRepository,org.b3log.symphony.repository.LinkRepository; org.b3log.symphony.service.LinkMgmtService
+symphony,org.b3log.symphony.service,LinkMgmtService,pingLink,3,1,2,147,0,,
+symphony,org.b3log.symphony.service,LinkMgmtService,singlePing,10,1,1,227,0,org.b3log.symphony.service.LinkMgmtService,org.b3log.symphony.service.LinkMgmtService
+symphony,org.b3log.symphony.service,LinkQueryService,getTopLink,11,1,1,59,0,,
+symphony,org.b3log.symphony.service,LivenessMgmtService,incLiveness,31,2,2,55,0,org.b3log.symphony.repository.LivenessRepository,org.b3log.symphony.repository.LivenessRepository
+symphony,org.b3log.symphony.service,LivenessQueryService,getCurrentLivenessPoint,20,2,1,56,0,org.b3log.symphony.model.Liveness,org.b3log.symphony.model.Liveness; org.b3log.symphony.repository.LivenessRepository
+symphony,org.b3log.symphony.service,LivenessQueryService,getYesterdayLiveness,11,1,1,84,0,org.b3log.symphony.repository.LivenessRepository,org.b3log.symphony.repository.LivenessRepository
+symphony,org.b3log.symphony.service,MailMgmtService,sendWeeklyNewsletter,72,10,0,106,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.service.ArticleQueryService; org.b3log.symphony.util.Mails; org.b3log.symphony.repository.OptionRepository; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,NotificationMgmtService,addReportHandledNotification,11,1,1,62,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,removeNotifications,9,1,2,84,0,,
+symphony,org.b3log.symphony.service,NotificationMgmtService,removeNotification,8,1,1,102,0,,
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentAcceptNotification,11,1,1,116,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleVoteDownNotification,11,1,1,138,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleVoteUpNotification,10,1,1,160,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentVoteDownNotification,11,1,1,179,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentVoteUpNotification,10,1,1,201,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleNewWatcherNotification,10,1,1,220,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleNewFollowerNotification,10,1,1,239,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addPerfectArticleNotification,11,1,1,258,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addFollowingArticleCommentNotification,11,1,1,280,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addFollowingArticleUpdateNotification,11,1,1,302,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addSysAnnounceRoleChangedNotification,11,1,1,324,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addInvitationLinkUsedNotification,11,1,1,346,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addNewFollowerNotification,10,1,1,368,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addSysAnnounceArticleNotification,11,1,1,387,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addSysAnnounceNewUserNotification,11,1,1,409,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addInvitecodeUsedNotification,11,1,1,431,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeRead,10,1,2,453,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeAllRead,10,1,1,473,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeRead,5,1,3,491,0,,
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeRead,10,1,2,505,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeRead,5,2,1,525,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,makeRead,18,3,1,537,0,,
+symphony,org.b3log.symphony.service,NotificationMgmtService,addBroadcastNotification,11,1,1,566,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addPointChargeNotification,11,1,1,588,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addAbusePointDeductNotification,11,1,1,610,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addPointExchangeNotification,11,1,1,632,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addPointTransferNotification,10,1,1,654,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleRewardNotification,11,1,1,673,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleThankNotification,11,1,1,695,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentThankNotification,11,1,1,717,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentNotification,11,1,1,739,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addAtNotification,11,1,1,761,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addArticleNotification,11,1,1,783,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addFollowingUserNotification,11,1,1,805,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addCommentedNotification,11,1,1,827,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addReplyNotification,11,1,1,849,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,NotificationMgmtService,addNotification,15,1,1,871,0,org.b3log.symphony.processor.channel.UserChannel,org.b3log.symphony.processor.channel.UserChannel
+symphony,org.b3log.symphony.service,NotificationQueryService,getNotification,9,1,1,129,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getUnreadFollowingNotificationCount,19,1,1,145,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getUnreadSysAnnounceNotificationCount,19,1,1,172,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getSysAnnounceNotifications,0,6,3,199,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,NotificationQueryService,getUnreadNotificationCount,17,1,1,288,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getUnreadNotificationCountByType,16,1,2,313,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getUnreadPointNotificationCount,28,1,1,339,0,,
+symphony,org.b3log.symphony.service,NotificationQueryService,getPointNotifications,0,20,3,375,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.UserExt; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,NotificationQueryService,getCommentedNotifications,44,2,3,611,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,NotificationQueryService,getReplyNotifications,44,2,3,691,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,NotificationQueryService,getAtNotifications,189,21,3,769,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,NotificationQueryService,getFollowingNotifications,75,5,3,1020,0,org.b3log.symphony.service.CommentQueryService,org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,NotificationQueryService,getBroadcastNotifications,53,4,3,1140,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.TagQueryService; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,OperationMgmtService,addOperation,8,1,1,50,0,,
+symphony,org.b3log.symphony.service,OperationQueryService,getAuditlogs,44,2,1,75,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.UserExt
+symphony,org.b3log.symphony.service,OptionMgmtService,removeOption,13,2,1,51,0,org.b3log.symphony.repository.OptionRepository,org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,OptionMgmtService,addOption,13,2,1,72,0,,
+symphony,org.b3log.symphony.service,OptionMgmtService,updateOption,13,2,2,93,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,getOnlineMemberCount,7,2,0,69,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,getOnlineVisitorCount,25,3,0,83,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,OptionQueryService,getStatistic,15,2,0,120,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,containReservedWord,17,4,1,142,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.service,OptionQueryService,getReservedWords,10,1,0,168,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,isReservedWord,10,1,1,183,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,getAllowRegister,10,1,0,204,0,org.b3log.symphony.repository.OptionRepository,org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,OptionQueryService,getMisc,14,2,0,221,0,,
+symphony,org.b3log.symphony.service,OptionQueryService,getOption,10,1,1,240,0,org.b3log.symphony.repository.OptionRepository,org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,PointtransferMgmtService,transfer,47,6,7,60,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,PointtransferQueryService,getLatestPointtransfers,17,1,3,98,0,,
+symphony,org.b3log.symphony.service,PointtransferQueryService,getTopBalanceUsers,23,3,1,126,0,org.b3log.symphony.model.UserExt,org.b3log.symphony.model.UserExt; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,PointtransferQueryService,getTopConsumptionUsers,23,3,1,156,0,org.b3log.symphony.model.UserExt,org.b3log.symphony.model.UserExt; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,PointtransferQueryService,getUserPoints,0,60,3,186,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.UserExt; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.Escapes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,PostExportService,exportPosts,91,6,1,96,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,ReferralMgmtService,updateReferral,30,3,1,53,0,org.b3log.symphony.repository.ReferralRepository,org.b3log.symphony.repository.ReferralRepository
+symphony,org.b3log.symphony.service,ReportMgmtService,makeReportIgnored,10,1,1,74,0,,
+symphony,org.b3log.symphony.service,ReportMgmtService,makeReportHandled,21,2,1,91,0,org.b3log.symphony.service.PointtransferMgmtService,org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.service.NotificationMgmtService
+symphony,org.b3log.symphony.service,ReportMgmtService,addReport,10,1,1,122,0,,
+symphony,org.b3log.symphony.service,ReportQueryService,getReports,0,16,1,101,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.UserExt; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.service.CommentQueryService; org.b3log.symphony.util.Escapes; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.service,RevisionQueryService,getCommentRevisions,55,8,2,75,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository; org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.service,RevisionQueryService,getArticleRevisions,45,4,1,150,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.util.Markdowns; org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.service,RevisionQueryService,count,14,1,2,213,0,,
+symphony,org.b3log.symphony.service,RewardMgmtService,addReward,10,1,1,52,0,,
+symphony,org.b3log.symphony.service,RewardQueryService,rewardedCount,14,1,2,53,0,,
+symphony,org.b3log.symphony.service,RewardQueryService,isRewarded,15,1,3,77,0,,
+symphony,org.b3log.symphony.service,RoleMgmtService,removeRole,14,2,1,73,0,org.b3log.symphony.repository.RolePermissionRepository,org.b3log.symphony.repository.RolePermissionRepository
+symphony,org.b3log.symphony.service,RoleMgmtService,addRole,13,2,1,94,0,,
+symphony,org.b3log.symphony.service,RoleMgmtService,updateRolePermissions,14,2,2,116,0,org.b3log.symphony.repository.RolePermissionRepository,org.b3log.symphony.repository.RolePermissionRepository
+symphony,org.b3log.symphony.service,RoleQueryService,countUser,10,1,1,87,0,,
+symphony,org.b3log.symphony.service,RoleQueryService,userHasPermissions,12,1,2,105,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.model.Permission; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,hasPermissions,4,1,2,126,0,org.b3log.symphony.model.Permission,org.b3log.symphony.model.Permission; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,getRole,13,2,1,139,0,,
+symphony,org.b3log.symphony.service,RoleQueryService,getUserPermissionsGrantMap,11,3,1,161,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,getUserPermissionsGrant,14,2,1,181,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,getUserPermissions,14,2,1,204,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,getPermissionsGrantMap,11,3,1,227,0,org.b3log.symphony.service.RoleQueryService,org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,RoleQueryService,getPermissionsGrant,23,4,1,247,0,org.b3log.symphony.repository.RolePermissionRepository,org.b3log.symphony.repository.RolePermissionRepository
+symphony,org.b3log.symphony.service,RoleQueryService,getPermissions,15,2,1,279,0,org.b3log.symphony.repository.RolePermissionRepository,org.b3log.symphony.repository.RolePermissionRepository
+symphony,org.b3log.symphony.service,RoleQueryService,getRoles,59,4,3,304,0,org.b3log.symphony.repository.RolePermissionRepository,org.b3log.symphony.repository.RolePermissionRepository
+symphony,org.b3log.symphony.service,SearchMgmtService,rebuildESIndex,25,1,0,60,0,,
+symphony,org.b3log.symphony.service,SearchMgmtService,rebuildAlgoliaIndex,24,4,0,90,0,,
+symphony,org.b3log.symphony.service,SearchMgmtService,updateESDocument,11,1,2,121,0,,
+symphony,org.b3log.symphony.service,SearchMgmtService,removeESDocument,8,1,2,139,0,,
+symphony,org.b3log.symphony.service,SearchMgmtService,updateAlgoliaDocument,56,8,1,153,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.service,SearchMgmtService,removeAlgoliaDocument,25,4,1,224,0,,
+symphony,org.b3log.symphony.service,SearchQueryService,searchElasticsearch,56,1,4,52,0,,
+symphony,org.b3log.symphony.service,SearchQueryService,searchAlgolia,30,4,3,126,0,,
+symphony,org.b3log.symphony.service,ShortLinkQueryService,linkArticle,64,11,1,68,0,,
+symphony,org.b3log.symphony.service,SitemapQueryService,genIndex,7,1,1,69,0,org.b3log.symphony.model.sitemap.Sitemap,org.b3log.symphony.model.sitemap.Sitemap
+symphony,org.b3log.symphony.service,SitemapQueryService,genDomains,11,2,1,83,0,org.b3log.symphony.cache.DomainCache,org.b3log.symphony.cache.DomainCache; org.b3log.symphony.model.sitemap.Sitemap
+symphony,org.b3log.symphony.service,SitemapQueryService,genArticles,19,2,1,103,0,org.b3log.symphony.model.sitemap.Sitemap,org.b3log.symphony.model.sitemap.Sitemap
+symphony,org.b3log.symphony.service,TagMgmtService,removeUnusedTags,40,7,0,123,0,org.b3log.symphony.service.FollowMgmtService,org.b3log.symphony.service.FollowMgmtService; org.b3log.symphony.repository.FollowRepository; org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.UserTagRepository; org.b3log.symphony.repository.DomainTagRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,TagMgmtService,addTag,54,3,2,176,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.cache.DomainCache; org.b3log.symphony.cache.TagCache; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,TagMgmtService,updateTag,17,2,2,255,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache; org.b3log.symphony.cache.DomainCache
+symphony,org.b3log.symphony.service,TagMgmtService,addTagRelation,14,2,1,288,0,,
+symphony,org.b3log.symphony.service,TagMgmtService,updateTagRelation,14,2,2,311,0,,
+symphony,org.b3log.symphony.service,TagMgmtService,relateTags,41,7,1,335,0,org.b3log.symphony.repository.TagTagRepository,org.b3log.symphony.repository.TagTagRepository; org.b3log.symphony.service.TagMgmtService; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,TagQueryService,buildTagObjs,18,3,1,113,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository; org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.service,TagQueryService,getDomains,28,5,1,142,0,org.b3log.symphony.repository.DomainTagRepository,org.b3log.symphony.repository.DomainTagRepository; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,TagQueryService,getTagsByPrefix,34,6,2,181,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.service,TagQueryService,isReservedTag,3,1,1,245,0,,
+symphony,org.b3log.symphony.service,TagQueryService,getInvalidTags,9,1,0,255,0,,
+symphony,org.b3log.symphony.service,TagQueryService,getTagByURI,29,6,1,271,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService; org.b3log.symphony.repository.TagRepository; org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.service,TagQueryService,getTagByTitle,28,6,1,314,0,org.b3log.symphony.service.TagQueryService,org.b3log.symphony.service.TagQueryService; org.b3log.symphony.model.Tag; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,TagQueryService,getTrendTags,14,2,1,356,0,org.b3log.symphony.model.Tag,org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.service,TagQueryService,getNewTags,3,1,0,377,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.service,TagQueryService,getColdTags,14,2,1,386,0,org.b3log.symphony.model.Tag,org.b3log.symphony.model.Tag
+symphony,org.b3log.symphony.service,TagQueryService,getTags,3,1,1,407,0,org.b3log.symphony.cache.TagCache,org.b3log.symphony.cache.TagCache
+symphony,org.b3log.symphony.service,TagQueryService,getCreator,30,2,1,417,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,TagQueryService,getParticipants,30,3,2,460,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,TagQueryService,getRelatedTags,38,8,2,506,0,org.b3log.symphony.repository.TagTagRepository,org.b3log.symphony.repository.TagTagRepository; org.b3log.symphony.model.Tag; org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,TagQueryService,getTags,33,4,2,561,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,TagQueryService,getTag,9,1,1,625,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository
+symphony,org.b3log.symphony.service,UserMgmtService,deactivateUser,35,2,1,157,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.EmotionRepository; org.b3log.symphony.repository.LivenessRepository; org.b3log.symphony.repository.VisitRepository; org.b3log.symphony.repository.NotificationRepository
+symphony,org.b3log.symphony.service,UserMgmtService,updateOnlineStatus,32,5,4,201,0,org.b3log.symphony.util.Geos,org.b3log.symphony.util.Geos; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,updateProfiles,30,3,1,246,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,updatePassword,20,3,1,302,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,addUser,222,18,1,336,0,org.b3log.symphony.processor.FileUploadProcessor,org.b3log.symphony.processor.FileUploadProcessor; org.b3log.symphony.service.PointtransferMgmtService; org.b3log.symphony.util.Gravatars; org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,UserMgmtService,removeUser,14,2,1,610,0,,
+symphony,org.b3log.symphony.service,UserMgmtService,updateUser,23,3,2,633,0,org.b3log.symphony.service.NotificationMgmtService,org.b3log.symphony.service.NotificationMgmtService; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,updateUserEmail,18,3,2,668,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,updateUserName,21,4,2,698,0,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware,org.b3log.symphony.processor.middleware.validate.UserRegisterValidationMidware; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserMgmtService,resetUnverifiedUsers,23,2,0,732,0,,
+symphony,org.b3log.symphony.service,UserMgmtService,tag,64,4,1,760,0,org.b3log.symphony.repository.TagRepository,org.b3log.symphony.repository.TagRepository; org.b3log.symphony.repository.OptionRepository
+symphony,org.b3log.symphony.service,UserQueryService,getNiceUsers,23,4,1,98,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,UserQueryService,getInvitedUserCount,10,1,1,136,0,,
+symphony,org.b3log.symphony.service,UserQueryService,getLatestLoggedInUsers,20,1,4,161,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getUserCntInDay,13,1,1,212,0,,
+symphony,org.b3log.symphony.service,UserQueryService,getUserCntInMonth,13,1,1,238,0,,
+symphony,org.b3log.symphony.service,UserQueryService,loadUserNames,24,2,0,264,0,org.b3log.symphony.service.AvatarQueryService,org.b3log.symphony.service.AvatarQueryService
+symphony,org.b3log.symphony.service,UserQueryService,getUserNamesByPrefix,36,7,1,294,0,,
+symphony,org.b3log.symphony.service,UserQueryService,getCurrentUser,8,2,1,354,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.service,UserQueryService,getAdmins,9,1,0,371,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getAnonymousUser,9,1,0,386,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getComBot,6,1,0,400,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.service,UserQueryService,getUserByEmail,9,1,1,413,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getUserNames,46,10,1,429,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService
+symphony,org.b3log.symphony.service,UserQueryService,getUserByName,21,3,1,493,0,org.b3log.symphony.model.UserExt,org.b3log.symphony.model.UserExt; org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getUsers,38,3,1,522,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.AvatarQueryService; org.b3log.symphony.service.RoleQueryService
+symphony,org.b3log.symphony.service,UserQueryService,getUsersByCity,34,2,1,593,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.repository.FollowRepository
+symphony,org.b3log.symphony.service,UserQueryService,getUser,9,1,1,664,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.service,UserQueryService,getLogoutURL,5,1,1,688,0,,
+symphony,org.b3log.symphony.service,UserQueryService,getLoginURL,5,1,1,701,0,,
+symphony,org.b3log.symphony.service,VerifycodeMgmtService,removeByCode,9,1,1,74,0,,
+symphony,org.b3log.symphony.service,VerifycodeMgmtService,addVerifycode,10,1,1,89,0,,
+symphony,org.b3log.symphony.service,VerifycodeMgmtService,removeExpiredVerifycodes,9,1,0,117,0,,
+symphony,org.b3log.symphony.service,VerifycodeMgmtService,sendEmailVerifycode,0,6,0,131,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.util.Mails
+symphony,org.b3log.symphony.service,VerifycodeQueryService,getVerifycodeByUserId,10,1,3,52,0,,
+symphony,org.b3log.symphony.service,VerifycodeQueryService,getVerifycode,10,1,1,74,0,,
+symphony,org.b3log.symphony.service,VisitMgmtService,add,27,4,1,57,0,,
+symphony,org.b3log.symphony.service,VisitMgmtService,expire,9,1,0,99,0,,
+symphony,org.b3log.symphony.service,VoteMgmtService,redditArticleScore,12,3,3,85,0,,
+symphony,org.b3log.symphony.service,VoteMgmtService,redditCommentScore,9,2,2,106,0,,
+symphony,org.b3log.symphony.service,VoteMgmtService,voteCancel,49,9,3,118,0,org.b3log.symphony.repository.VoteRepository,org.b3log.symphony.repository.VoteRepository; org.b3log.symphony.service.VoteMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,VoteMgmtService,voteUp,10,1,3,181,0,org.b3log.symphony.service.LivenessMgmtService,org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.VoteMgmtService
+symphony,org.b3log.symphony.service,VoteMgmtService,voteDown,10,1,3,200,0,org.b3log.symphony.service.LivenessMgmtService,org.b3log.symphony.service.LivenessMgmtService; org.b3log.symphony.service.VoteMgmtService
+symphony,org.b3log.symphony.service,VoteMgmtService,up,52,9,3,218,0,org.b3log.symphony.repository.VoteRepository,org.b3log.symphony.repository.VoteRepository; org.b3log.symphony.service.VoteMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,VoteMgmtService,down,52,9,3,287,0,org.b3log.symphony.repository.VoteRepository,org.b3log.symphony.repository.VoteRepository; org.b3log.symphony.service.VoteMgmtService; org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.service,VoteMgmtService,updateTagArticleScore,7,2,1,356,0,org.b3log.symphony.repository.TagArticleRepository,org.b3log.symphony.repository.TagArticleRepository
+symphony,org.b3log.symphony.service,VoteQueryService,isVoted,17,2,2,70,0,,
+symphony,org.b3log.symphony.service,VoteQueryService,isOwn,25,5,3,95,0,org.b3log.symphony.repository.ArticleRepository,org.b3log.symphony.repository.ArticleRepository; org.b3log.symphony.repository.CommentRepository
+symphony,org.b3log.symphony.util,Emotions,isEmoji,8,3,1,41,0,,
+symphony,org.b3log.symphony.util,Emotions,toUnicode,8,1,1,57,0,,
+symphony,org.b3log.symphony.util,Emotions,toAliases,3,1,1,75,0,,
+symphony,org.b3log.symphony.util,Emotions,clear,8,2,1,85,0,,
+symphony,org.b3log.symphony.util,Emotions,convert,14,3,1,101,0,org.b3log.symphony.util.Emotions,org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.util,Emotions,main,4,1,1,124,0,,
+symphony,org.b3log.symphony.util,Emotions,Emotions,2,1,0,136,0,,
+symphony,org.b3log.symphony.util,Escapes,sanitizeFilename,3,1,1,33,0,,
+symphony,org.b3log.symphony.util,Escapes,escapeHTML,3,1,1,45,0,,
+symphony,org.b3log.symphony.util,Escapes,escapeHTML,9,3,1,54,0,,
+symphony,org.b3log.symphony.util,Escapes,Escapes,2,1,0,69,0,,
+symphony,org.b3log.symphony.util,Geos,Geos,2,1,0,47,0,,
+symphony,org.b3log.symphony.util,Geos,getAddress,48,6,1,53,0,org.b3log.symphony.util.Geos,org.b3log.symphony.util.Geos
+symphony,org.b3log.symphony.util,Geos,getAddressTaobao,36,3,1,119,0,,
+symphony,org.b3log.symphony.util,Gravatars,getRandomAvatarData,18,3,1,48,0,,
+symphony,org.b3log.symphony.util,Gravatars,Gravatars,2,1,0,77,0,,
+symphony,org.b3log.symphony.util,Headers,getSuffix,9,2,1,34,0,,
+symphony,org.b3log.symphony.util,Headers,getSuffix,12,2,1,51,0,,
+symphony,org.b3log.symphony.util,Headers,getHeader,7,2,3,70,0,org.b3log.symphony.util.Escapes,org.b3log.symphony.util.Escapes
+symphony,org.b3log.symphony.util,Headers,Headers,2,1,0,87,0,,
+symphony,org.b3log.symphony.util,Images,qiniuImgProcessing,19,5,1,31,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.util,Images,Images,2,1,0,64,0,,
+symphony,org.b3log.symphony.util,JSONs,JSONs,2,1,0,35,0,,
+symphony,org.b3log.symphony.util,JSONs,clone,3,1,1,41,0,,
+symphony,org.b3log.symphony.util,JSONs,clone,3,1,1,51,0,,
+symphony,org.b3log.symphony.util,Languages,getAvailableLanguages,3,1,0,41,0,,
+symphony,org.b3log.symphony.util,Languages,Languages,2,1,0,50,0,,
+symphony,org.b3log.symphony.util,Links,getLink,9,1,1,56,0,,
+symphony,org.b3log.symphony.util,Links,containsChinese,8,2,1,81,0,,
+symphony,org.b3log.symphony.util,Mails,Mails,2,1,0,111,0,,
+symphony,org.b3log.symphony.util,Mails,sendHTML,0,9,5,117,0,org.b3log.symphony.util.Mails,org.b3log.symphony.util.Mails
+symphony,org.b3log.symphony.util,Mails,batchSendHTML,105,14,5,189,0,org.b3log.symphony.util.Mails,org.b3log.symphony.util.Mails
+symphony,org.b3log.symphony.util,Mails,aliSendHtml,35,2,7,313,0,org.b3log.symphony.util.Mails,org.b3log.symphony.util.Mails
+symphony,org.b3log.symphony.util,Mails,percentEncode,3,1,1,364,0,,
+symphony,org.b3log.symphony.util,Mails,getISO8601Time,6,1,0,369,0,,
+symphony,org.b3log.symphony.util,Mails,getStringToMailByList,8,2,1,377,0,,
+symphony,org.b3log.symphony.util,Mails,refreshWeeklyTemplate,17,1,1,386,0,,
+symphony,org.b3log.symphony.util,Markdowns,Markdowns,2,1,0,128,0,,
+symphony,org.b3log.symphony.util,Markdowns,clean,69,16,2,134,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns
+symphony,org.b3log.symphony.util,Markdowns,toHTML,131,20,1,227,0,org.b3log.symphony.util.Markdowns,org.b3log.symphony.util.Markdowns; org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Pangu; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.util,Markdowns,head,39,10,2,278,0,org.b3log.symphony.service.UserQueryService,org.b3log.symphony.service.UserQueryService; org.b3log.symphony.util.Pangu; org.b3log.symphony.util.Emotions
+symphony,org.b3log.symphony.util,Markdowns,tail,2,1,2,324,0,,
+symphony,org.b3log.symphony.util,Markdowns,toHtmlByLute,16,1,1,388,0,,
+symphony,org.b3log.symphony.util,Markdowns,toHtmlByFlexmark,4,1,1,409,0,,
+symphony,org.b3log.symphony.util,Markdowns,getHTML,8,2,1,415,0,,
+symphony,org.b3log.symphony.util,Markdowns,putHTML,6,1,2,431,0,,
+symphony,org.b3log.symphony.util,Markdowns,inputWhitelist,9,2,1,444,0,,
+symphony,org.b3log.symphony.util,MediaPlayers,isMedia,9,3,1,71,0,,
+symphony,org.b3log.symphony.util,MediaPlayers,isVditorRender,3,1,1,87,0,,
+symphony,org.b3log.symphony.util,MediaPlayers,renderAudio,16,3,1,103,0,,
+symphony,org.b3log.symphony.util,MediaPlayers,renderVideo,22,5,1,129,0,org.b3log.symphony.util.MediaPlayers,org.b3log.symphony.util.MediaPlayers
+symphony,org.b3log.symphony.util,MediaPlayers,MediaPlayers,2,1,0,166,0,,
+symphony,org.b3log.symphony.util,Networks,isInnerAddress,10,1,1,42,0,org.b3log.symphony.util.Networks,org.b3log.symphony.util.Networks
+symphony,org.b3log.symphony.util,Networks,ipToLong,3,1,1,63,0,,
+symphony,org.b3log.symphony.util,Networks,Networks,2,1,0,67,0,,
+symphony,org.b3log.symphony.util,Pangu,Pangu,2,1,0,30,0,,
+symphony,org.b3log.symphony.util,Pangu,spacingText,29,2,1,94,0,,
+symphony,org.b3log.symphony.util,Results,newSucc,3,1,0,32,0,,
+symphony,org.b3log.symphony.util,Results,newFail,3,1,0,41,0,,
+symphony,org.b3log.symphony.util,Results,Results,2,1,0,50,0,,
+symphony,org.b3log.symphony.util,Runes,Runes,2,1,0,36,0,,
+symphony,org.b3log.symphony.util,Runes,removeControlChars,6,1,1,43,0,,
+symphony,org.b3log.symphony.util,Runes,getChinesePercent,12,3,1,57,0,,
+symphony,org.b3log.symphony.util,Sessions,isBot,7,2,0,83,0,,
+symphony,org.b3log.symphony.util,Sessions,setBot,9,2,1,97,0,,
+symphony,org.b3log.symphony.util,Sessions,isMobile,7,2,0,113,0,,
+symphony,org.b3log.symphony.util,Sessions,setMobile,9,2,1,127,0,,
+symphony,org.b3log.symphony.util,Sessions,getAvatarViewMode,7,2,0,143,0,,
+symphony,org.b3log.symphony.util,Sessions,setAvatarViewMode,9,2,1,157,0,,
+symphony,org.b3log.symphony.util,Sessions,isLoggedIn,7,2,0,173,0,,
+symphony,org.b3log.symphony.util,Sessions,setLoggedIn,9,2,1,187,0,,
+symphony,org.b3log.symphony.util,Sessions,getUser,7,2,0,203,0,,
+symphony,org.b3log.symphony.util,Sessions,setUser,9,2,1,217,0,,
+symphony,org.b3log.symphony.util,Sessions,getTemplateDir,7,2,0,233,0,,
+symphony,org.b3log.symphony.util,Sessions,setTemplateDir,9,2,1,247,0,,
+symphony,org.b3log.symphony.util,Sessions,clearThreadLocalData,3,1,0,263,0,,
+symphony,org.b3log.symphony.util,Sessions,getCSRFToken,17,4,1,270,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions
+symphony,org.b3log.symphony.util,Sessions,login,34,3,3,298,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository
+symphony,org.b3log.symphony.util,Sessions,logout,12,2,2,349,0,org.b3log.symphony.service.UserMgmtService,org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.util,Sessions,currentUser,46,10,1,370,0,org.b3log.symphony.util.Sessions,org.b3log.symphony.util.Sessions; org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.util,Sessions,tryLogInWithCookie,31,5,2,434,0,org.b3log.symphony.repository.UserRepository,org.b3log.symphony.repository.UserRepository; org.b3log.symphony.service.UserMgmtService
+symphony,org.b3log.symphony.util,Sessions,get,7,2,1,480,0,org.b3log.symphony.util.JSONs,org.b3log.symphony.util.JSONs
+symphony,org.b3log.symphony.util,Sessions,put,3,1,2,495,0,,
+symphony,org.b3log.symphony.util,Sessions,Sessions,2,1,0,505,0,,
+symphony,org.b3log.symphony.util,Symphonys,checkClientTrusted,2,1,2,874,0,,
+symphony,org.b3log.symphony.util,Symphonys,checkServerTrusted,2,1,2,878,0,,
+symphony,org.b3log.symphony.util,Symphonys,getAcceptedIssuers,3,1,0,882,0,,
+symphony,org.b3log.symphony.util,Symphonys,run,43,4,0,894,0,org.b3log.symphony.service.OptionQueryService,org.b3log.symphony.service.OptionQueryService
+symphony,org.b3log.symphony.util,Symphonys,getActiveThreadCount,3,1,0,948,0,,
+symphony,org.b3log.symphony.util,Symphonys,getMaxThreadCount,3,1,0,957,0,,
+symphony,org.b3log.symphony.util,Symphonys,get,3,1,1,966,0,,
+symphony,org.b3log.symphony.util,Symphonys,getBoolean,7,2,1,976,0,org.b3log.symphony.util.Symphonys,org.b3log.symphony.util.Symphonys
+symphony,org.b3log.symphony.util,Symphonys,getFloat,7,2,1,991,0,org.b3log.symphony.util.Symphonys,org.b3log.symphony.util.Symphonys
+symphony,org.b3log.symphony.util,Symphonys,getInt,7,2,1,1006,0,org.b3log.symphony.util.Symphonys,org.b3log.symphony.util.Symphonys
+symphony,org.b3log.symphony.util,Symphonys,getLong,7,2,1,1021,0,org.b3log.symphony.util.Symphonys,org.b3log.symphony.util.Symphonys
+symphony,org.b3log.symphony.util,Symphonys,Symphonys,2,1,0,1036,0,,
+symphony,org.b3log.symphony.util,Templates,getTemplate,3,1,1,76,0,,
+symphony,org.b3log.symphony.util,Templates,Templates,2,1,0,87,0,,
+symphony,org.b3log.symphony.util,Tesseracts,recognizeCharacter,9,1,1,37,0,,
+symphony,org.b3log.symphony.util,Tesseracts,Tesseracts,2,1,0,52,0,,
+symphony,org.b3log.symphony.util,ElasticsearchTestCase,QueryDslBuilder,4,1,0,35,1,,
+symphony,org.b3log.symphony.util,ElasticsearchTestCase,QueryDslJSONBuilder,23,1,0,42,1,,
+symphony,org.b3log.symphony.util,PanguTestCase,test,4,1,0,32,1,org.b3log.symphony.util.Pangu,org.b3log.symphony.util.Pangu
+symphony,org.b3log.symphony.util,RedditScoreTest,redditScore,12,2,0,36,1,,
+symphony,org.b3log.symphony.util,RedditScoreTest,redditCommentScore,9,2,2,53,0,,
+symphony,org.b3log.symphony.util,XSSTestCase,xss,11,1,0,36,1,,

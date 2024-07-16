@@ -25,6 +25,8 @@ import org.apache.logging.log4j.Logger;
 import org.b3log.latke.Keys;
 import org.b3log.latke.Latkes;
 import org.b3log.latke.http.RequestContext;
+import org.b3log.latke.http.function.Handler;
+import org.b3log.latke.http.renderer.AbstractFreeMarkerRenderer;
 import org.b3log.latke.ioc.Inject;
 import org.b3log.latke.model.User;
 import org.b3log.latke.service.LangPropsService;
@@ -34,6 +36,8 @@ import org.b3log.latke.util.Stopwatchs;
 import org.b3log.symphony.Server;
 import org.b3log.symphony.cache.DomainCache;
 import org.b3log.symphony.model.*;
+import org.b3log.symphony.processor.ActivityProcessor;
+import org.b3log.symphony.processor.SkinRenderer;
 import org.b3log.symphony.util.Markdowns;
 import org.b3log.symphony.util.Sessions;
 import org.b3log.symphony.util.Symphonys;
@@ -56,6 +60,7 @@ public class DataModelService {
      * Logger.
      */
     private static final Logger LOGGER = LogManager.getLogger(DataModelService.class);
+    public Handler showActivities;
 
     /**
      * Language service.
@@ -526,5 +531,26 @@ public class DataModelService {
      */
     private void fillSysInfo(final Map<String, Object> dataModel) {
         dataModel.put(Common.VERSION, Server.VERSION);
+    }
+
+    /**
+     * Shows activity page.
+     *
+     * @param context           the specified context
+     *
+     */
+    public void showActivities(final RequestContext context) {
+        final AbstractFreeMarkerRenderer renderer = new SkinRenderer(context, "home/activities.ftl");
+        final Map<String, Object> dataModel = renderer.getDataModel();
+        fillHeaderAndFooter(context, dataModel);
+        fillRandomArticles(dataModel);
+        fillSideHotArticles(dataModel);
+        fillSideTags(dataModel);
+        fillLatestCmts(dataModel);
+
+        dataModel.put("pointActivityCheckinMin", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKIN_MIN);
+        dataModel.put("pointActivityCheckinMax", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKIN_MAX);
+        dataModel.put("pointActivityCheckinStreak", Pointtransfer.TRANSFER_SUM_C_ACTIVITY_CHECKINT_STREAK);
+        dataModel.put("activitYesterdayLivenessRewardMaxPoint", Symphonys.ACTIVITY_YESTERDAY_REWARD_MAX);
     }
 }
